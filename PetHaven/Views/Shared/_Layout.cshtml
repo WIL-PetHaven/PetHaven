@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetHaven - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand">PetHaven</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.ActionLink("Categories", "Index", "Categories", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item">
+                    @Html.RouteLink("Animals", "ProductsIndex", new { area = "" }, new { @class = "nav-link" })
+                </li>
+                @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                    <li>
+                        @Html.ActionLink("Admin", "Index", "Admin", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                }
+            </ul>
+            @using (Html.BeginRouteForm("ProductsIndex", FormMethod.Get, new { @class = "form-inline my-2 my-lg-0" }))
+            {
+                <div class="form-inline my-2 my-lg-0">
+                    @Html.TextBox("Search", null, new { @class = "form-control mr-sm-2", @placeholder = "Search Products" })
+                </div>
+                <button type="submit" class="btn btn-secondary my-2 my-sm-0" style="margin-right:30px;">Search</button>
+            }
+            @if (Request.IsAuthenticated)
+            {
+                @Html.Action("Summary", "Basket")
+            }
+            @Html.Partial("_LoginPartial")
+        </div>
+    </nav>
+    <br />
+    <br />
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
