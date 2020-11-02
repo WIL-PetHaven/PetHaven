@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+    <body class="homeBackground">
+        <div class="home">
+            <div class="homeCenter">
+                <h1>WELCOME TO PetHaven Test</h1>
+                <h5>Where lost animals can find a home</h5>
+                <br />
+                <br />
+                @Html.RouteLink("Browse Our Animals", "ProductsIndex", new { area = "" }, new { @class = "btn btn-secondary" })
+            </div>
+        </div>
+    </body>

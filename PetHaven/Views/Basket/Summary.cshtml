@@ -1,0 +1,8 @@
+﻿@model PetHaven.ViewModels.BasketSummaryViewModel
+
+<ul class="nav navbar-nav navbar-right">
+    <li>
+        @Html.ActionLink("Basket: " + Model.NumberOfItems + " items(s) " +
+            HttpUtility.HtmlDecode(Html.DisplayFor(model => Model.TotalCost).ToString()), "Index", "Basket", new { @class = "nav-link" })
+    </li>
+</ul>
