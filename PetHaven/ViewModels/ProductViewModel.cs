@@ -24,7 +24,6 @@ namespace PetHaven.ViewModels
         [DataType(DataType.Currency)]
         [DisplayFormat(DataFormatString = "{0:c}")]
         [RegularExpression("[0-9]+(\\.[0-9][0-9]?)?", ErrorMessage = "The price must be a number up to two decimal places")]
-        public decimal Price { get; set; }
 
         [Display(Name = "Category")]
         public int CategoryID { get; set; }

@@ -92,13 +92,9 @@ namespace PetHaven.Controllers
                     {
                         Session.Abandon();
                     }
-                    Basket basket = Basket.GetBasket();
                     //if there was no previously logged in user migrate the basket from GUID to the 
                     //username
-                    if (!userWasLoggedIn)
-                    {
-                        basket.MigrateBasket(model.Email);
-                    }
+                  
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -187,8 +183,6 @@ namespace PetHaven.Controllers
                 {
                     await UserManager.AddToRoleAsync(user.Id, "Users");
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-                    Basket basket = Basket.GetBasket();
-                    basket.MigrateBasket(model.Email);
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

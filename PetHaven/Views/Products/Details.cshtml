@@ -33,13 +33,6 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
         @if (Model.ProductImageMappings != null && Model.ProductImageMappings.Any())
         {
             <dt></dt>
@@ -55,24 +48,7 @@
                     </a>
                 }
             </dd>
-        }
-
-        <dd>
-            @if (Request.IsAuthenticated)
-            {
-                <dt>
-                    Quantity:
-                </dt>
-                using (Html.BeginForm("AddToBasket", "Basket"))
-                {
-                    @Html.AntiForgeryToken()
-                    @Html.HiddenFor(model => model.ID)
-                    @Html.DropDownList("quantity", Enumerable.Range(1, 10).Select(i => new SelectListItem { Text = i.ToString(), Value = i.ToString() }), new { @class = "custom-select" })
-                    <input type="submit" class="btn btn-primary btn-xs" value="Add to Basket">
-                }
-            }
-        </dd>
-
+        }   
         </dl>
 </div>
 <p>

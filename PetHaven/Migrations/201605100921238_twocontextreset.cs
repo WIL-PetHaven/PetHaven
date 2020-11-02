@@ -1,8 +1,8 @@
-namespace PetHaven.Migrations.StoreConfiguration
+﻿namespace PetHaven.Migrations.StoreConfiguration
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
     public partial class twocontextreset : DbMigration
     {
         public override void Up()
@@ -10,53 +10,52 @@ namespace PetHaven.Migrations.StoreConfiguration
             CreateTable(
                 "dbo.Categories",
                 c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 50),
-                    })
+                {
+                    ID = c.Int(nullable: false, identity: true),
+                    Name = c.String(nullable: false, maxLength: 50),
+                })
                 .PrimaryKey(t => t.ID);
-            
+
             CreateTable(
                 "dbo.Products",
                 c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        Name = c.String(nullable: false, maxLength: 500),
-                        Description = c.String(nullable: false, maxLength: 500),
-                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        CategoryID = c.Int(),
-                    })
+                {
+                    ID = c.Int(nullable: false, identity: true),
+                    Name = c.String(nullable: false, maxLength: 500),
+                    Description = c.String(nullable: false, maxLength: 500),
+                    CategoryID = c.Int(),
+                })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.Categories", t => t.CategoryID)
                 .Index(t => t.CategoryID);
-            
+
             CreateTable(
                 "dbo.ProductImageMappings",
                 c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        ImageNumber = c.Int(nullable: false),
-                        ProductID = c.Int(nullable: false),
-                        ProductImageID = c.Int(nullable: false),
-                    })
+                {
+                    ID = c.Int(nullable: false, identity: true),
+                    ImageNumber = c.Int(nullable: false),
+                    ProductID = c.Int(nullable: false),
+                    ProductImageID = c.Int(nullable: false),
+                })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("dbo.Products", t => t.ProductID, cascadeDelete: true)
                 .ForeignKey("dbo.ProductImages", t => t.ProductImageID, cascadeDelete: true)
                 .Index(t => t.ProductID)
                 .Index(t => t.ProductImageID);
-            
+
             CreateTable(
                 "dbo.ProductImages",
                 c => new
-                    {
-                        ID = c.Int(nullable: false, identity: true),
-                        FileName = c.String(maxLength: 100),
-                    })
+                {
+                    ID = c.Int(nullable: false, identity: true),
+                    FileName = c.String(maxLength: 100),
+                })
                 .PrimaryKey(t => t.ID)
                 .Index(t => t.FileName, unique: true);
-            
+
         }
-        
+
         public override void Down()
         {
             DropForeignKey("dbo.ProductImageMappings", "ProductImageID", "dbo.ProductImages");

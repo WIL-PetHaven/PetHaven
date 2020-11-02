@@ -59,12 +59,12 @@ namespace PetHaven.Controllers
             //sort the results
             switch (sortBy)
             {
-                case "price_lowest":
-                    products = products.OrderBy(p => p.Price);
+                case "name":
+                    products = products.OrderBy(p => p.Name);
                     break;
-                case "price_highest":
-                    products = products.OrderByDescending(p => p.Price);
-                    break;
+                case "name_rev":
+                    products = products.OrderByDescending(p => p.Description);
+                    break; 
                 default:
                     products = products.OrderBy(p => p.Name);
                     break;
@@ -75,8 +75,8 @@ namespace PetHaven.Controllers
             viewModel.SortBy = sortBy;
             viewModel.Sorts = new Dictionary<string, string>
             {
-                {"Price low to high", "price_lowest" },
-                {"Price high to low", "price_highest" }
+               {"Name", "name" },
+               {"Description", "name_rev" }
             };
 
             return View(viewModel);
@@ -122,7 +122,6 @@ namespace PetHaven.Controllers
             Product product = new Product();
             product.Name = viewModel.Name;
             product.Description = viewModel.Description;
-            product.Price = viewModel.Price;
             product.CategoryID = viewModel.CategoryID;
             product.ProductImageMappings = new List<ProductImageMapping>();
             //get a list of selected images without any blanks
@@ -182,7 +181,6 @@ namespace PetHaven.Controllers
             viewModel.ID = product.ID;
             viewModel.Name = product.Name;
             viewModel.Description = product.Description;
-            viewModel.Price = product.Price;
 
             return View(viewModel);
         }
@@ -273,12 +271,6 @@ namespace PetHaven.Controllers
         {
             Product product = db.Products.Find(id);
             db.Products.Remove(product);
-
-            var orderLines = db.OrderLines.Where(ol => ol.ProductID == id);
-            foreach (var ol in orderLines)
-            {
-                ol.ProductID = null;
-            }
 
             db.SaveChanges();
             return RedirectToAction("Index");

@@ -154,3 +154,25 @@ C:\Users\Dylan\Documents\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompile
 C:\Users\Dylan\Documents\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 C:\Users\Dylan\Documents\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 C:\Users\Dylan\Documents\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\csc.exe
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\System.Collections.Immutable.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\System.Reflection.Metadata.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\vbc.exe
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe.config
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\PetHaven.dll.config
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\PetHaven.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\bin\PetHaven.pdb
+D:\Visual Studios\repo\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
+D:\Visual Studios\repo\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
+D:\Visual Studios\repo\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
+D:\Visual Studios\repo\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
+D:\Visual Studios\repo\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
+D:\Visual Studios\repo\PetHaven\PetHaven\obj\Debug\PetHaven.dll
+D:\Visual Studios\repo\PetHaven\PetHaven\obj\Debug\PetHaven.pdb

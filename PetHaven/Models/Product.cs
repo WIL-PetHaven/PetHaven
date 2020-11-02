@@ -17,17 +17,8 @@ namespace PetHaven.Models
         [RegularExpression(@"^[,:a-zA-Z 0-9\.\,\+\-./]*$", ErrorMessage = "Please enter a product description made up of letters and numbers only")]
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
-
-        [Required(ErrorMessage = "The price cannot be blank")]
-        [Range(0.10, 100000, ErrorMessage = "Please enter a price between 0.10 and 100000.00")]
-        [DataType(DataType.Currency)]
-        [DisplayFormat(DataFormatString = "{0:c}")]
-        [RegularExpression("[0-9]+(\\.[0-9][0-9]?)?", ErrorMessage = "The price must be a number up to two decimal places")]
-        public decimal Price { get; set; }
-
         public int? CategoryID { get; set; }
         public virtual Category Category { get; set; }
-
         public virtual ICollection<ProductImageMapping> ProductImageMappings { get; set; }
     }
 }

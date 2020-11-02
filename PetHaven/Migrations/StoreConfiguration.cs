@@ -21,15 +21,15 @@ namespace PetHaven.Migrations.StoreConfiguration
             categories.ForEach(c => context.Categories.AddOrUpdate(p => p.Name, c));
             context.SaveChanges();
 
-            var products = new List<Product>
-            {
-                
-            };
+			var products = new List<Product>
+			{
 
-            products.ForEach(c => context.Products.AddOrUpdate(p => p.Name, c));
-            context.SaveChanges();
+			};
 
-            var images = new List<ProductImage>
+			products.ForEach(c => context.Products.AddOrUpdate(p => p.Name, c));
+			context.SaveChanges();
+
+			var images = new List<ProductImage>
             {
                 
             };
@@ -45,20 +45,7 @@ namespace PetHaven.Migrations.StoreConfiguration
             imageMappings.ForEach(c => context.ProductImageMappings.AddOrUpdate(im => im.ProductImageID, c));
             context.SaveChanges();
 
-            var orders = new List<Order>
-            {
-                
-            };
-
-            orders.ForEach(c => context.Orders.AddOrUpdate(o => o.DateCreated, c));
-            context.SaveChanges();
-
-            var orderLines = new List<OrderLine>
-            {
-                
-            };
-
-            orderLines.ForEach(c => context.OrderLines.AddOrUpdate(ol => ol.OrderID, c));
+                    
             context.SaveChanges();
 
 

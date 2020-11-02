@@ -39,11 +39,7 @@
                     @Html.TextBox("Search", null, new { @class = "form-control mr-sm-2", @placeholder = "Search Products" })
                 </div>
                 <button type="submit" class="btn btn-secondary my-2 my-sm-0" style="margin-right:30px;">Search</button>
-            }
-            @if (Request.IsAuthenticated)
-            {
-                @Html.Action("Summary", "Basket")
-            }
+            }        
             @Html.Partial("_LoginPartial")
         </div>
     </nav>
