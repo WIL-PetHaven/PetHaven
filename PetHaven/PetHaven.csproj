@@ -290,8 +290,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrapLux.css" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Content\pethavenlogo.jpg" />
-    <Content Include="Content\Porsche.jpg" />
+    <Content Include="Content\pethavenlogo.png" />
     <Content Include="Content\ProductImages\Thumbnails\Bed1.jpg" />
     <Content Include="Content\ProductImages\Thumbnails\Bed2.jpg" />
     <Content Include="Content\ProductImages\Thumbnails\Bibs1.jpg" />
