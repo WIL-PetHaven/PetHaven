@@ -13,16 +13,9 @@
  * Theme
  > Theme to be uniform accross all pages. including buttons, links, pages, etc.
 
- > Home page is using a placeholder image, change when we come to an agreement.
-
  > Ensure the home page design does not distort on different devices.
 
  > Any other advice for design can be incorporated once agreed upon.
-
- * Pricing
- > Take all prices out, change database to accept the animals name instead of taking a decimal for price.
-
- > No pricing should be seen at all as there is no pricing for our NGO rather they will accept a booking.
 
  * Basket 
  > Change the basket to booking as there is no check out
@@ -40,8 +33,6 @@
 
  * Misc
  > Add date for when the animal was rescued.
-
- > Add link to the PETHAVEN in the navbar to navigate back home.
 
  > Change "Products" to "Animals" where need be, also in the database.
 
