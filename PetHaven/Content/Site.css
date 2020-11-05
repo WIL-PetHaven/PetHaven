@@ -66,8 +66,10 @@ textarea {
 }
 
 .homeBackground {
-    background: url('pethavenlogo.jpg') no-repeat center fixed;
-    overflow: hidden !important;
-    background-size: cover;
+    background: url('pethavenlogo.png') center fixed;
+    /*overflow: hidden !important;*/
+    /*background-size: cover;*/
+    background-position-x: 70%;
+    background-position-y: 50%;
     background-repeat: no-repeat;
 }
