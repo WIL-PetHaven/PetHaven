@@ -13,7 +13,7 @@ namespace PetHaven.Controllers
             return View();
         }
 
-        public ActionResult About(string id)
+        public ActionResult Donations(string id)
         {
             ViewBag.Message = "Your application description page. You entered the ID " + id;
 
