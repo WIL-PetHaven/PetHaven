@@ -21,28 +21,28 @@ namespace PetHaven.Migrations.StoreConfiguration
             categories.ForEach(c => context.Categories.AddOrUpdate(p => p.Name, c));
             context.SaveChanges();
 
-			var products = new List<Product>
+			var Animals = new List<Animal>
 			{
 
 			};
 
-			products.ForEach(c => context.Products.AddOrUpdate(p => p.Name, c));
+			Animals.ForEach(c => context.Animals.AddOrUpdate(p => p.Name, c));
 			context.SaveChanges();
 
-			var images = new List<ProductImage>
+			var images = new List<AnimalImage>
             {
                 
             };
 
-            images.ForEach(c => context.ProductImages.AddOrUpdate(p => p.FileName, c));
+            images.ForEach(c => context.AnimalImages.AddOrUpdate(p => p.FileName, c));
             context.SaveChanges();
 
-            var imageMappings = new List<ProductImageMapping>
+            var imageMappings = new List<AnimalImageMapping>
             {
                
             };
 
-            imageMappings.ForEach(c => context.ProductImageMappings.AddOrUpdate(im => im.ProductImageID, c));
+            imageMappings.ForEach(c => context.AnimalImageMappings.AddOrUpdate(im => im.AnimalImageID, c));
             context.SaveChanges();
 
                     

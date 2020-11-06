@@ -143,10 +143,10 @@ D:\VS2015_Projects\BabyStore\BabyStore\bin\PagedList.xml
 D:\VS2015_Projects\BabyStore\BabyStore\bin\PagedList.Mvc.xml
 D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.InitialDatabase.resources
 D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.CategoryNameValidation.resources
-D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.ProductValidation.resources
-D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.ProductImages.resources
+D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.AnimalValidation.resources
+D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.AnimalImages.resources
 D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.UniqueFileName.resources
-D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.CreateProductImageMappings.resources
+D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.StoreConfiguration.CreateAnimalImageMappings.resources
 D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.InitialCreate.resources
 D:\VS2015_Projects\BabyStore\BabyStore\obj\Debug\BabyStore.Migrations.update_user_fields.resources
 D:\VS2015_Projects\BabyStore - CH07\BabyStore\bin\roslyn\csc.exe

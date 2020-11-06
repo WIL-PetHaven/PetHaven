@@ -97,7 +97,7 @@ namespace PetHaven.Controllers
         {
             Category category = db.Categories.Find(id);
 
-            foreach (var p in category.Products)
+            foreach (var p in category.Animals)
             {
                 p.CategoryID = null;
             }
