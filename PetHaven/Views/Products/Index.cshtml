@@ -2,13 +2,13 @@
 @using PagedList.Mvc
 
 @{
-    ViewBag.Title = "Products";
+    ViewBag.Title = "Animals";
 }
 
 
 <h2>@ViewBag.Title</h2>
 <p>
-    @(String.IsNullOrWhiteSpace(Model.Search) ? "Showing all" : "You search for " + Model.Search + " found")  @Model.Products.TotalItemCount products
+    @(String.IsNullOrWhiteSpace(Model.Search) ? "Showing all" : "You search for " + Model.Search + " found")  @Model.Products.TotalItemCount animals
 </p>
 
 <p>
