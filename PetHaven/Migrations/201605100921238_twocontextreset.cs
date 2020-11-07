@@ -17,7 +17,7 @@
                 .PrimaryKey(t => t.ID);
 
             CreateTable(
-                "dbo.Products",
+                "dbo.Animals",
                 c => new
                 {
                     ID = c.Int(nullable: false, identity: true),
@@ -30,22 +30,22 @@
                 .Index(t => t.CategoryID);
 
             CreateTable(
-                "dbo.ProductImageMappings",
+                "dbo.AnimalImageMappings",
                 c => new
                 {
                     ID = c.Int(nullable: false, identity: true),
                     ImageNumber = c.Int(nullable: false),
-                    ProductID = c.Int(nullable: false),
-                    ProductImageID = c.Int(nullable: false),
+                    AnimalID = c.Int(nullable: false),
+                    AnimalImageID = c.Int(nullable: false),
                 })
                 .PrimaryKey(t => t.ID)
-                .ForeignKey("dbo.Products", t => t.ProductID, cascadeDelete: true)
-                .ForeignKey("dbo.ProductImages", t => t.ProductImageID, cascadeDelete: true)
-                .Index(t => t.ProductID)
-                .Index(t => t.ProductImageID);
+                .ForeignKey("dbo.Animals", t => t.AnimalID, cascadeDelete: true)
+                .ForeignKey("dbo.AnimalImages", t => t.AnimalImageID, cascadeDelete: true)
+                .Index(t => t.AnimalID)
+                .Index(t => t.AnimalImageID);
 
             CreateTable(
-                "dbo.ProductImages",
+                "dbo.AnimalImages",
                 c => new
                 {
                     ID = c.Int(nullable: false, identity: true),
@@ -58,16 +58,16 @@
 
         public override void Down()
         {
-            DropForeignKey("dbo.ProductImageMappings", "ProductImageID", "dbo.ProductImages");
-            DropForeignKey("dbo.ProductImageMappings", "ProductID", "dbo.Products");
-            DropForeignKey("dbo.Products", "CategoryID", "dbo.Categories");
-            DropIndex("dbo.ProductImages", new[] { "FileName" });
-            DropIndex("dbo.ProductImageMappings", new[] { "ProductImageID" });
-            DropIndex("dbo.ProductImageMappings", new[] { "ProductID" });
-            DropIndex("dbo.Products", new[] { "CategoryID" });
-            DropTable("dbo.ProductImages");
-            DropTable("dbo.ProductImageMappings");
-            DropTable("dbo.Products");
+            DropForeignKey("dbo.AnimalImageMappings", "AnimalImageID", "dbo.AnimalImages");
+            DropForeignKey("dbo.AnimalImageMappings", "AnimalID", "dbo.Animals");
+            DropForeignKey("dbo.Animals", "CategoryID", "dbo.Categories");
+            DropIndex("dbo.AnimalImages", new[] { "FileName" });
+            DropIndex("dbo.AnimalImageMappings", new[] { "AnimalImageID" });
+            DropIndex("dbo.AnimalImageMappings", new[] { "AnimalID" });
+            DropIndex("dbo.Animals", new[] { "CategoryID" });
+            DropTable("dbo.AnimalImages");
+            DropTable("dbo.AnimalImageMappings");
+            DropTable("dbo.Animals");
             DropTable("dbo.Categories");
         }
     }

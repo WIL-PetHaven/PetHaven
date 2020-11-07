@@ -21,7 +21,7 @@
                     @Html.ActionLink("Categories", "Index", "Categories", new { area = "" }, new { @class = "nav-link" })
                 </li>
                 <li class="nav-item">
-                    @Html.RouteLink("Animals", "ProductsIndex", new { area = "" }, new { @class = "nav-link" })
+                    @Html.RouteLink("Animals", "AnimalsIndex", new { area = "" }, new { @class = "nav-link" })
                 </li>
                 <li class="nav-item">
                     @Html.ActionLink("Donations", "Donations", "Home", new { area = "" }, new { @class = "nav-link" })
@@ -36,10 +36,10 @@
                     </li>
                 }
             </ul>
-            @using (Html.BeginRouteForm("ProductsIndex", FormMethod.Get, new { @class = "form-inline my-2 my-lg-0" }))
+            @using (Html.BeginRouteForm("AnimalsIndex", FormMethod.Get, new { @class = "form-inline my-2 my-lg-0" }))
             {
                 <div class="form-inline my-2 my-lg-0">
-                    @Html.TextBox("Search", null, new { @class = "form-control mr-sm-2", @placeholder = "Search Products" })
+                    @Html.TextBox("Search", null, new { @class = "form-control mr-sm-2", @placeholder = "Search Animals" })
                 </div>
                 <button type="submit" class="btn btn-secondary my-2 my-sm-0" style="margin-right:30px;">Search</button>
             }        

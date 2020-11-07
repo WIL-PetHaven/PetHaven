@@ -11,6 +11,6 @@ namespace PetHaven.Models
         [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$", ErrorMessage = "Please enter a category name beginning with a capital letter and made up of letters and spaces only")]
         [Display(Name = "Category Name")]
         public string Name { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<Animal> Animals { get; set; }
     }
 }

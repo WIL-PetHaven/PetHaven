@@ -14,34 +14,34 @@ namespace PetHaven
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "ProductsCreate",
-                url: "Products/Create",
-                defaults: new { controller = "Products", action = "Create" }
+                name: "AnimalsCreate",
+                url: "Animals/Create",
+                defaults: new { controller = "Animals", action = "Create" }
             );
 
             routes.MapRoute(
-                name: "ProductsbyCategorybyPage",
-                url: "Products/{category}/Page{page}",
-                defaults: new { controller = "Products", action = "Index" }
+                name: "AnimalsbyCategorybyPage",
+                url: "Animals/{category}/Page{page}",
+                defaults: new { controller = "Animals", action = "Index" }
             );
 
             routes.MapRoute(
-                name: "ProductsbyPage",
-                url: "Products/Page{page}",
+                name: "AnimalsbyPage",
+                url: "Animals/Page{page}",
                 defaults: new
-                { controller = "Products", action = "Index" }
+                { controller = "Animals", action = "Index" }
             );
 
             routes.MapRoute(
-                name: "ProductsbyCategory",
-                url: "Products/{category}",
-                defaults: new { controller = "Products", action = "Index" }
+                name: "AnimalsbyCategory",
+                url: "Animals/{category}",
+                defaults: new { controller = "Animals", action = "Index" }
             );
 
             routes.MapRoute(
-                name: "ProductsIndex",
-                url: "Products",
-                defaults: new { controller = "Products", action = "Index" }
+                name: "AnimalsIndex",
+                url: "Animals",
+                defaults: new { controller = "Animals", action = "Index" }
             );
             
             routes.MapRoute(

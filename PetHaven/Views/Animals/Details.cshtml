@@ -1,0 +1,61 @@
+﻿@model PetHaven.Models.Animal
+
+@{
+    ViewBag.Title = "Animal Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        @if (Model.AnimalImageMappings != null && Model.AnimalImageMappings.Any())
+        {
+            <dt></dt>
+            <dd>
+                <img src="@(Url.Content(Constants.AnimalImagePath) + Model.AnimalImageMappings.OrderBy(pim =>	pim.ImageNumber).ElementAt(0).AnimalImage.FileName)" style=padding:5px>
+            </dd>
+            <dt></dt>
+            <dd>
+                @foreach (var item in Model.AnimalImageMappings.OrderBy(pim => pim.ImageNumber))
+                {
+                    <a href="@(Url.Content(Constants.AnimalImagePath) + item.AnimalImage.FileName)">
+                        <img src="@(Url.Content(Constants.AnimalThumbnailPath) + item.AnimalImage.FileName)" style=padding:5px>
+                    </a>
+                }
+            </dd>
+        }   
+        </dl>
+</div>
+<p>
+    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+        @Html.Raw(" | ")
+    }
+    @Html.ActionLink("Back to List", "Index")
+</p>

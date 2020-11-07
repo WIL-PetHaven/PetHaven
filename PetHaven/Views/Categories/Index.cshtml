@@ -23,7 +23,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.ActionLink(item.Name, "Index", "Products", new { category = item.Name }, null)
+            @Html.ActionLink(item.Name, "Index", "Animals", new { category = item.Name }, null)
         </td>
         <td>
             @if (Request.IsAuthenticated && User.IsInRole("Admin"))
