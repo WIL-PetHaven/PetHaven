@@ -9,5 +9,7 @@ namespace PetHaven.DAL
         public DbSet<Category> Categories { get; set; }
         public DbSet<AnimalImage> AnimalImages { get; set; }
         public DbSet<AnimalImageMapping> AnimalImageMappings { get; set; }
+
+        public System.Data.Entity.DbSet<PetHaven.Models.Booking> Bookings { get; set; }
     }
 }

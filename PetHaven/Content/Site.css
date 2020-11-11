@@ -73,3 +73,7 @@ textarea {
     background-position-y: 50%;
     background-repeat: no-repeat;
 }
+
+.btn-primary {
+    color: #1f9bcf !important;
+}

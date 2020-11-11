@@ -49,6 +49,19 @@
                 }
             </dd>
         }
+        
+        <dd>
+            @if (Request.IsAuthenticated)
+            {
+                using (Html.BeginForm("Index", "Bookings"))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(model => model.ID)
+                    <input type="submit" class="btn btn-primary btn-xs" value="Book now">
+                }
+            }
+        </dd>
+
     </dl>
 </div>
 <p>
@@ -59,11 +72,5 @@
     }
     @Html.ActionLink("Back to List", "Index")
 </p>
-<p>
-    @if (Request.IsAuthenticated && User.IsInRole("Users"))
-    {
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
-        @Html.Raw(" | ")
-    }
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+        
