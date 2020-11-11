@@ -1,30 +1,81 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact Us";
 }
 <h2>@ViewBag.Title</h2>
+
 <br />
 <br />
-<h4>Telephone number:</h4>
-<p>
-    031 266 5701
-</p>
-<br />
-<h4>E-mail Address:</h4>
-<p>
-    <a href="mailto:information@pethaven.co.za">information@pethaven.co.za</a><br />
-</p>
-<br />
-<h4>Postal Address:</h4>
-<p>
-    Postbox 357,<br />
-    Link Road,<br />
-    3630
-</p>
-<br />
-<h4>Address:</h4>
-<p>
-    1 Link Road,<br />
-    Westville,<br />
-    Durban,<br />
-    3630
-</p>
+<div id="Contact">
+    <div class="spacing">
+        <div class="content">
+
+            <div class="contact-grid">
+
+                <div class="contact-details">
+
+                    <div class="contact_info">
+                        <div class="contact_info_wrapper">
+                            <h4>Telephone Number:</h4>
+                            <p>
+                                <a href="tel:0312665701">031 266 5701</a>
+                            </p>
+                            <br />
+                            <h4>E-mail Address:</h4>
+                            <p>
+                                <a href="mailto:ngo.pethaven@gmail.com">ngo.pethaven@gmail.com</a><br />
+                            </p>
+                            <br />
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.9557254548968!2d30.92048371563049!3d-29.836699728606444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70046c16590e9%3A0x928acab1c4e1ddf1!2sWestville%20Civic%20Centre!5e0!3m2!1sen!2sza!4v1605089022993!5m2!1sen!2sza" width="370" height="320" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_form_div">
+
+                    <form class="contact_form" method="POST">
+
+                        <div class="row">
+                            <div class="col1"><p>Full Name</p></div>
+                            <div class="col2">
+                                <input type="text" name="name" id="c_name" placeholder="John Smith"
+                                       required
+                                       maxlength="50">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col1">E-mail</div>
+                            <div class="col2">
+                                <input type="email" name="email" id="c_email" placeholder="johnsmith@gmail.com"
+                                       required
+                                       maxlength="50">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col1">Contact No.</div>
+                            <div class="col2">
+                                <input type="text" name="number" id="c_phone_no"
+                                       placeholder="082 222 3841"
+                                       maxlength="15">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col1">Message</div>
+                            <div class="col2">
+                                <textarea name="message" id="c_message" cols="30" rows="5"
+                                          placeholder="Enter message here.."
+                                          required
+                                          maxlength="250"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col1"></div>
+                            <div class="col2">
+                                <input type="button" name="submit" value="Send" onclick="location.href='@Url.Action("Email", "HomeController")'">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

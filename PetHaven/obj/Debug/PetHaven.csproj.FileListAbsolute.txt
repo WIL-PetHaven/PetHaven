@@ -245,3 +245,9 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComp
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.dll
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.pdb
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.xml
