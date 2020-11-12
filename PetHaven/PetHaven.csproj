@@ -214,6 +214,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\ContactForm.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Animal.cs" />
