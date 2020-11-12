@@ -251,3 +251,9 @@ F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Microsoft.CodeDom.Provide
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.pdb
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.xml
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.pdb
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.xml
