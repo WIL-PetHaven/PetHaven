@@ -36,15 +36,15 @@ textarea {
     margin-left: 20px;
 }
 
-.pagination li.active {
-    background: black;
-    color: white;
-}
+    .pagination li.active {
+        background: #1f9bcf;
+        color: white;
+    }
 
-.pagination li:hover {
-    background: black;
-    color: white;
-}
+    .pagination li:hover {
+        background: #1f9bcf;
+        color: white;
+    }
 
 .pagination li:hover a {
     color: white;
@@ -142,3 +142,16 @@ textarea {
     .contact_form textarea {
         resize: none;
     }
+
+.btn-primary {
+    background-color: #1f9bcf !important;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #1f9bcf !important;
+}
+
+.btn-third {
+    background-color: white;
+}
