@@ -9,7 +9,7 @@ namespace PetHaven.Models
     public class Booking
     {
         [Key]
-        public string BookingID { get; set; }
+        public int ID { get; set; }
         public int AnimalID { get; set; }
         //public string Category { get; set; }
         //public string Name { get; set; }
@@ -17,32 +17,30 @@ namespace PetHaven.Models
         //public string Username { get; set; }
         //public DateTime VisitDate { get; set; }
 
-        private const string BookingSessionKey = "BookingID";
+        //private string GetBasketID()
+        //{
+        //    if (HttpContext.Current.Session[BasketSessionKey] == null)
+        //    {
+        //        if (!string.IsNullOrWhiteSpace(HttpContext.Current.User.Identity.Name))
+        //        {
+        //            HttpContext.Current.Session[BasketSessionKey] =
+        //         HttpContext.Current.User.Identity.Name;
+        //        }
+        //        else
+        //        {
+        //            Guid tempBasketID = Guid.NewGuid();
+        //            HttpContext.Current.Session[BasketSessionKey] = tempBasketID.ToString();
+        //        }
+        //    }
+        //    return HttpContext.Current.Session[BasketSessionKey].ToString();
+        //}
 
-        private string GetBookingID()
-        {
-            if (HttpContext.Current.Session[BookingSessionKey] == null)
-            {
-                if (!string.IsNullOrWhiteSpace(HttpContext.Current.User.Identity.Name))
-                {
-                    HttpContext.Current.Session[BookingSessionKey] =
-                 HttpContext.Current.User.Identity.Name;
-                }
-                else
-                {
-                    Guid tempBookingID = Guid.NewGuid();
-                    HttpContext.Current.Session[BookingSessionKey] = tempBookingID.ToString();
-                }
-            }
-            return HttpContext.Current.Session[BookingSessionKey].ToString();
-        }
-
-        public static Booking GetBooking()
-        {
-            Booking booking = new Booking();
-            booking.BookingID = booking.GetBookingID();
-            return booking;
-        }
+        //public static Basket GetBasket()
+        //{
+        //    Basket basket = new Basket();
+        //    basket.BasketID = basket.GetBasketID();
+        //    return basket;
+        //}
 
         //public void AddToBasket(int productID, int quantity)
         //{
