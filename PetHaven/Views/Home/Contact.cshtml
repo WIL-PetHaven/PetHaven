@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
                 {
                     @Html.AntiForgeryToken()
                     <div class="contact_form_div">
