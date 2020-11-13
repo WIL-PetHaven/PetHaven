@@ -1,4 +1,6 @@
-﻿@{
+﻿@model PetHaven.Models.ContactForm
+
+@{
     ViewBag.Title = "Contact Us";
 }
 <h2>@ViewBag.Title</h2>
@@ -29,52 +31,61 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact_form_div">
+                @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="contact_form_div">
+                        <div class="contact_form">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="row">
+                                <div class="col1">
+                                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @placeholder = "John Doe", @class = "control-label col-md-2" })
+                                </div>
+                                <div class="col2">
+                                    @Html.TextBoxFor(model => model.Name, new { htmlAttributes = new { @class = "form-input" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
 
-                    <form class="contact_form" method="POST">
+                            <div class="row">
+                                <div class="col1">
+                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                </div>
+                                <div class="col2">
+                                    @Html.TextBoxFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
 
-                        <div class="row">
-                            <div class="col1"><p>Full Name</p></div>
-                            <div class="col2">
-                                <input type="text" name="name" id="c_name" placeholder="John Smith"
-                                       required
-                                       maxlength="50">
+                            <div class="row">
+                                <div class="col1">
+                                    @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                                </div>
+                                <div class="col2">
+                                    @Html.TextBoxFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col1">E-mail</div>
-                            <div class="col2">
-                                <input type="email" name="email" id="c_email" placeholder="johnsmith@gmail.com"
-                                       required
-                                       maxlength="50">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col1">Contact No.</div>
-                            <div class="col2">
-                                <input type="text" name="number" id="c_phone_no"
-                                       placeholder="082 222 3841"
-                                       maxlength="15">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col1">Message</div>
-                            <div class="col2">
-                                <textarea name="message" id="c_message" cols="30" rows="5"
-                                          placeholder="Enter message here.."
-                                          required
-                                          maxlength="250"></textarea>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col1"></div>
-                            <div class="col2">
-                                <input type="button" name="submit" value="Send" onclick="location.href='@Url.Action("Email", "HomeController")'">
+                            <div class="row">
+                                <div class="col1">
+                                    @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                                </div>
+                                <div class="col2">
+                                    @Html.TextAreaFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                            </div>
+
+                            <div class="row">
+                                <div class="col1"></div>
+                                <div class="col2">
+                                    <input type="submit" value="Send Message"/>
+                                </div>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                }
             </div>
         </div>
     </div>
