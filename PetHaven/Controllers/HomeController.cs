@@ -13,6 +13,8 @@ namespace PetHaven.Controllers
 {
     public class HomeController : Controller
     {
+        private const string Value = "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";
+
         public ActionResult Index()
         {
             return View();
@@ -43,7 +45,7 @@ namespace PetHaven.Controllers
 
         static async Task Execute(ContactForm model)
         {
-            var apiKey = Environment.GetEnvironmentVariable("SENDGRID_API_KEY");
+            var apiKey = "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";
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("ngo.pethaven@gmail.com", "PetHaven");
 
