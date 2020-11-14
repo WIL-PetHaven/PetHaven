@@ -37,14 +37,21 @@ namespace PetHaven.Controllers
         [HttpPost]
         public async Task<ActionResult> Contact(ContactForm model)
         {
-            await Execute(model);
+            // If the model state is valid (all fields have passed validation), then send a message
+            if (ModelState.IsValid)
+            {
+                await Execute(model);
 
-            // Return confirmation page
+                // Return confirmation page
+                return RedirectToAction("MessageSubmitted");
+            }
+
             return View();
         } 
 
         static async Task Execute(ContactForm model)
         {
+
             var apiKey = "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";
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("ngo.pethaven@gmail.com", "PetHaven");
