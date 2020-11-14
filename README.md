@@ -18,27 +18,21 @@
  > Any other advice for design can be incorporated once agreed upon.
 
  * Basket 
- > Change the basket to booking as there is no check out
+ > Change the basket to booking as there is no check out.
 
- > When in the basket no pricing should be seen 
+ > When in the basket no pricing should be seen.
 
- > Take the basket total out.
-
- > User should not be able to select quantity
-
- > Change order now to book now. When clicked all details of the animal should be displayed
+ > Change order now to book now. When clicked all details of the animal should be displayed.
 
  * Admin
- > View all orders to change to view current bookings, should display animal name instead of total price
+ > View all orders to change to view current bookings, should display animal name instead of total price.
 
  * Misc
  > Add date for when the animal was rescued.
 
- > Change "Products" to "Animals" where need be, also in the database.
-
  > 
 
- * Additional changes when we come across them can be added below
+ * Additional changes when we come across them can be added below.
  >
 
 
