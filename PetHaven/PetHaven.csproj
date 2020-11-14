@@ -186,7 +186,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\BookingsController.cs" />
+    <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -208,11 +208,16 @@
       <DependentUpon>201604221549045_update_user_fields.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201605100921238_twocontextreset.cs" />
+    <Compile Include="Migrations\202011141130419_AddBookingLine.cs" />
+    <Compile Include="Migrations\202011141130419_AddBookingLine.Designer.cs">
+      <DependentUpon>202011141130419_AddBookingLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\StoreConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Booking.cs" />
+    <Compile Include="Models\BookingLine.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ContactForm.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -230,6 +235,7 @@
     <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\AnimalIndexViewModel.cs" />
     <Compile Include="ViewModels\AnimalViewModel.cs" />
+    <Compile Include="ViewModels\BookingViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin\Antlr3.Runtime.dll" />
@@ -445,11 +451,7 @@
     <Content Include="Views\Shared\_UserDetailsPartial.cshtml" />
     <Content Include="Views\Manage\Edit.cshtml" />
     <Content Include="Views\Shared\_EditUserPartial.cshtml" />
-    <Content Include="Views\Bookings\Create.cshtml" />
-    <Content Include="Views\Bookings\Delete.cshtml" />
-    <Content Include="Views\Bookings\Details.cshtml" />
-    <Content Include="Views\Bookings\Edit.cshtml" />
-    <Content Include="Views\Bookings\Index.cshtml" />
+    <Content Include="Views\Booking\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -468,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604221549045_update_user_fields.resx">
       <DependentUpon>201604221549045_update_user_fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011141130419_AddBookingLine.resx">
+      <DependentUpon>202011141130419_AddBookingLine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\AutoStore.Migrations.InitialCreate.resources" />
     <EmbeddedResource Include="obj\Debug\AutoStore.Migrations.StoreConfiguration.AddBasketLine.resources" />

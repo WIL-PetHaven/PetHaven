@@ -222,41 +222,12 @@ F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.Cor
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\csc.exe
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\vbc.exe
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\PetHaven.dll.config
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\PetHaven.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\PetHaven.pdb
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.pdb
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.xml
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.pdb
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.xml
 F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\csc.exe
 F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -315,3 +286,31 @@ F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.csproj.C
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.pdb
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\csc.exe
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\vbc.exe
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\PetHaven.dll.config
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\PetHaven.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\PetHaven.pdb
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.pdb
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.xml
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookingLine.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
