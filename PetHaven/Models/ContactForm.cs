@@ -20,7 +20,6 @@ namespace PetHaven.Models
         [Required]
         [MaxLength(15)]
         [Phone]
-        [Display(Name="Phone No.")]
         public string Phone { get; set; }
         [Required]
         [MaxLength(250)]

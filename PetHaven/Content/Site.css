@@ -124,7 +124,7 @@ textarea {
 
     .contact_form .col2 input[type=submit] {
         color: white;
-        background-color: #88CAD2;
+        background-color: #1f9bcf;
         cursor: pointer;
         box-shadow: 0 0px 10px 0 rgba(0,0,0,0.2);
         /* transition: transform 250ms ease-in; */
@@ -155,4 +155,3 @@ textarea {
 .btn-third {
     background-color: white;
 }
-
