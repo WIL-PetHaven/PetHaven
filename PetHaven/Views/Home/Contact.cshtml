@@ -27,7 +27,9 @@
                                 <a href="mailto:ngo.pethaven@gmail.com">ngo.pethaven@gmail.com</a><br />
                             </p>
                             <br />
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.9557254548968!2d30.92048371563049!3d-29.836699728606444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70046c16590e9%3A0x928acab1c4e1ddf1!2sWestville%20Civic%20Centre!5e0!3m2!1sen!2sza!4v1605089022993!5m2!1sen!2sza" width="370" height="320" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
+                            <h4>Physical Address:</h4>
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.9557254548968!2d30.92048371563049!3d-29.836699728606444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70046c16590e9%3A0x928acab1c4e1ddf1!2sWestville%20Civic%20Centre!5e0!3m2!1sen!2sza!4v1605089022993!5m2!1sen!2sza" width="400" height="350" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -37,6 +39,7 @@
                     <div class="contact_form_div">
                         <div class="contact_form">
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            &nbsp; &nbsp; &nbsp; &nbsp; @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                             <div class="row">
                                 <div class="col1">
                                     @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -44,9 +47,9 @@
                                 <div class="col2">
                                     @Html.TextBoxFor(model => model.Name, new { @placeholder = "John Smith" })
                                 </div>
-                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                             </div>
 
+                            &nbsp; &nbsp; &nbsp; &nbsp; @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                             <div class="row">
                                 <div class="col1">
                                     @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -54,9 +57,9 @@
                                 <div class="col2">
                                     @Html.TextBoxFor(model => model.Email, new { @placeholder = "johnsmith@gmail.com" })
                                 </div>
-                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                             </div>
 
+                            &nbsp; &nbsp; &nbsp; &nbsp; @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                             <div class="row">
                                 <div class="col1">
                                     @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -64,9 +67,9 @@
                                 <div class="col2">
                                     @Html.TextBoxFor(model => model.Phone, new { @placeholder = "083 222 5832" })
                                 </div>
-                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                             </div>
 
+                            &nbsp; &nbsp; &nbsp; &nbsp; @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                             <div class="row">
                                 <div class="col1">
                                     @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -74,13 +77,12 @@
                                 <div class="col2">
                                     @Html.TextAreaFor(model => model.Message, new { @cols = "30", @rows = "5", @placeholder = "Enter message here.." })
                                 </div>
-                                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
                             </div>
 
                             <div class="row">
                                 <div class="col1"></div>
                                 <div class="col2">
-                                    <input type="submit" value="Send Message"/>
+                                    <input type="submit" value="Send Message" />
                                 </div>
                             </div>
                         </div>
