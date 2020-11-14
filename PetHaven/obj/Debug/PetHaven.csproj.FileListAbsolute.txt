@@ -257,3 +257,32 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.Do
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.pdb
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.xml
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\csc.exe
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\System.Collections.Immutable.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\System.Reflection.Metadata.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\vbc.exe
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\VBCSCompiler.exe.config
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\PetHaven.dll.config
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\PetHaven.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\PetHaven.pdb
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\SendGrid.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\SendGrid.pdb
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\SendGrid.xml
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.dll
+F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\obj\Debug\PetHaven.pdb

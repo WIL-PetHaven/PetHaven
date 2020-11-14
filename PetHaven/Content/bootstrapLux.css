@@ -67,7 +67,6 @@ body {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #55595c;
   text-align: left;
   background-color: #fff;
 }
@@ -10403,11 +10402,13 @@ a.text-warning:hover, a.text-warning:focus {
 }
 
 .text-danger {
-  color: #d9534f !important;
+    color: #d9534f !important;
+    font-size: 15px !important;
 }
 
 a.text-danger:hover, a.text-danger:focus {
-  color: #b52b27 !important;
+    color: #b52b27 !important;
+    font-size: 15px !important;
 }
 
 .text-light {

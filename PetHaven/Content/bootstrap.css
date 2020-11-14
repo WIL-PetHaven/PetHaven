@@ -10404,10 +10404,12 @@ a.text-warning:hover, a.text-warning:focus {
 
 .text-danger {
   color: #d9534f !important;
+  font-size: 15px !important;
 }
 
 a.text-danger:hover, a.text-danger:focus {
-  color: #b52b27 !important;
+    color: #b52b27 !important;
+    font-size: 15px !important;
 }
 
 .text-light {
