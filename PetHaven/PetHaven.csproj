@@ -218,6 +218,7 @@
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\BookingLine.cs" />
+    <Compile Include="Models\Bookings.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ContactForm.cs" />
     <Compile Include="Models\IdentityModels.cs" />

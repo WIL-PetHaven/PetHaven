@@ -162,15 +162,15 @@ namespace PetHaven.Models
             HttpContext.Current.Session[BookingSessionKey] = userName;
         }
 
-        //public string CreateBookedLines(int bookedID)
+        //public string CreateBookingsLines(int bookedID)
         //{
-        //    string bookedTotal = "";
+        //    string BookingsTotal = "";
 
         //    var bookingLines = GetBookingLines();
 
         //    foreach (var item in bookingLines)
         //    {
-        //        BookedLine bookedLine = new BookedLine
+        //        BookingsLine BookingsLine = new BookingsLine
         //        {
         //            Animal = item.Animal,
         //            AnimalID = item.AnimalID,
