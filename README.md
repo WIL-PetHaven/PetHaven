@@ -11,8 +11,6 @@
  --------
 ### Still need to change
  * Theme
- > Theme to be uniform accross all pages. including buttons, links, pages, etc.
-
  > Ensure the home page design does not distort on different devices.
 
  > Any other advice for design can be incorporated once agreed upon.
