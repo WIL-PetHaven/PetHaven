@@ -286,6 +286,12 @@ F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.csproj.C
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven 2\PetHaven\obj\Debug\PetHaven.pdb
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookingLine.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\csc.exe
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -306,11 +312,6 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.pdb
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.xml
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookingLine.resources
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<PetHaven.Models.Bookings>
+
+@{ ViewBag.Title = "Bookings"; }
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Index", "Bookings", FormMethod.Get))
+{
+<div class="row form-group">
+    <div class="col-md-2">
+        <label>Search Bookings by ID or Text:</label>
+    </div>
+    <div class="col-md-3">
+        @Html.TextBox("BookingSearch", null, new { @class = "form-control", @placeholder = "Search Bookings" })
+    </div>
+    <div class="col-md-2">
+        <label>Search between dates:</label>
+    </div>
+    <div class="col-md-2">
+        <input type="date" id="StartDate" name="StartDate" class="form-control" value="@Request.QueryString["StartDate"]" />
+    </div>
+    <div class="col-md-2">
+        <input type="date" id="EndDate" name="EndDate" class="form-control" value="@Request.QueryString["EndDate"]" />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookingsID)
+        </th>
+        <th>
+            @Html.ActionLink("User", "Index", new
+            {
+                bookingsSortBooking = ViewBag.UserSort,
+                bookingsSearch = ViewBag.CurrentBookingsSearch,
+                startdate = ViewBag.StartDate,
+                endDate = ViewBag.EndDate
+            })
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeliveryAddress)
+        </th>
+
+        <th>
+            @Html.ActionLink("Time of Booking", "Index", new
+            {
+                bookingsSortBooking = ViewBag.DateSort,
+                bookingsSearch = ViewBag.CurrentBookingsSearch,
+                startdate = ViewBag.StartDate,
+                endDate = ViewBag.EndDate
+            })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.BookingsID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeliveryName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeliveryAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateCreated)
+    </td>
+    <td>
+        @Html.ActionLink("Details", "Details", new { id = item.BookingsID })
+    </td>
+</tr>}
+
+</table>

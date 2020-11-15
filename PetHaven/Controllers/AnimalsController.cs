@@ -272,9 +272,18 @@ namespace PetHaven.Controllers
             Animal Animal = db.Animals.Find(id);
             db.Animals.Remove(Animal);
 
+            var bookingsLines = db.BookingsLines.Where(ol => ol.AnimalID == id);
+            foreach (var ol in bookingsLines)
+            {
+                ol.AnimalID = null;
+            }
+
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
+
 
         protected override void Dispose(bool disposing)
         {

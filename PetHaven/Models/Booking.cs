@@ -126,6 +126,32 @@ namespace PetHaven.Models
             return numberOfItems;
         }
 
+        public string CreateBookingsLines(int bookingsID)
+        {
+            string bookingstotal = "";
+
+            var bookinglines = GetBookingLines();
+
+            foreach (var item in bookinglines)
+            {
+                BookingsLine bookingsline = new BookingsLine
+                {
+                    Animal = item.Animal,
+                    AnimalID = item.AnimalID,
+                    AnimalName = item.Animal.Name,
+                    Quantity = item.Quantity,
+
+                    BookingsID = bookingsID
+                };
+
+                db.BookingsLines.Add(bookingsline);
+            }
+
+            db.SaveChanges();
+            EmptyBooking();
+            return bookingstotal;
+        }
+
         public void MigrateBooking(string userName)
         {
             //find the current booking and store it in memory using ToList()
@@ -162,30 +188,5 @@ namespace PetHaven.Models
             HttpContext.Current.Session[BookingSessionKey] = userName;
         }
 
-        //public string CreateBookingsLines(int bookedID)
-        //{
-        //    string BookingsTotal = "";
-
-        //    var bookingLines = GetBookingLines();
-
-        //    foreach (var item in bookingLines)
-        //    {
-        //        BookingsLine BookingsLine = new BookingsLine
-        //        {
-        //            Animal = item.Animal,
-        //            AnimalID = item.AnimalID,
-        //            AnimalName = item.Animal.Name,
-        //            Quantity = item.Quantity,
-
-        //            BookedID = bookedID
-        //        };
-
-        //        db.BookedLines.Add(bookedLine);
-        //    }
-
-        //    db.SaveChanges();
-        //    EmptyBooking();
-        //    return bookedTotal;
-        //}
     }
 }
