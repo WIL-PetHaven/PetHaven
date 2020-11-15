@@ -7,7 +7,7 @@ namespace PetHaven.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
     }
 
@@ -43,14 +43,14 @@ namespace PetHaven.Models
     public class ForgotViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         [EmailAddress]
         public string Email { get; set; }
 
@@ -67,7 +67,7 @@ namespace PetHaven.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
 
         [Required]
@@ -104,7 +104,7 @@ namespace PetHaven.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
 
         [Required]
@@ -125,7 +125,7 @@ namespace PetHaven.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "E-mail")]
         public string Email { get; set; }
     }
 }
