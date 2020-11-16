@@ -20,16 +20,13 @@ namespace PetHaven.Controllers
             return View();
         }
 
-        public ActionResult Donations(string id)
+        public ActionResult AboutUs()
         {
-            ViewBag.Message = "Your application description page. You entered the ID " + id;
-
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
             return View();
         }
 

@@ -15,8 +15,8 @@
 }
 else
 {
-    <ul class="nav navbar-nav navbar-right"  style="margin-right:10px;">
+    <ul class="nav navbar-nav navbar-right" style="margin-right:10px;">
         <li>@Html.ActionLink("Register", "Register", "Account", new { returnUrl = HttpContext.Current.Request.Url.AbsolutePath }, htmlAttributes: new { id = "registerLink", @class = "nav-link" })</li>
-        <li>@Html.ActionLink("Login", "Login", "Account", new { returnUrl = HttpContext.Current.Request.Url.AbsolutePath }, htmlAttributes: new { id = "loginLink", @class = "nav-link"})</li>
+        <li>@Html.ActionLink("Login", "Login", "Account", new { returnUrl = HttpContext.Current.Request.Url.AbsolutePath }, htmlAttributes: new { id = "loginLink", @class = "nav-link" })</li>
     </ul>
 }
