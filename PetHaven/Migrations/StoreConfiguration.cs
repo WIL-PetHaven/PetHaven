@@ -16,22 +16,22 @@ namespace PetHaven.Migrations.StoreConfiguration
         {
             var categories = new List<Category>
             {
-                
+
             };
             categories.ForEach(c => context.Categories.AddOrUpdate(p => p.Name, c));
             context.SaveChanges();
 
-			var Animals = new List<Animal>
-			{
-
-			};
-
-			Animals.ForEach(c => context.Animals.AddOrUpdate(p => p.Name, c));
-			context.SaveChanges();
-
-			var images = new List<AnimalImage>
+            var Animals = new List<Animal>
             {
-                
+
+            };
+
+            Animals.ForEach(c => context.Animals.AddOrUpdate(p => p.Name, c));
+            context.SaveChanges();
+
+            var images = new List<AnimalImage>
+            {
+
             };
 
             images.ForEach(c => context.AnimalImages.AddOrUpdate(p => p.FileName, c));
@@ -39,13 +39,31 @@ namespace PetHaven.Migrations.StoreConfiguration
 
             var imageMappings = new List<AnimalImageMapping>
             {
-               
+
             };
 
             imageMappings.ForEach(c => context.AnimalImageMappings.AddOrUpdate(im => im.AnimalImageID, c));
             context.SaveChanges();
 
-                    
+            var bookings = new List<Bookings>
+            {
+               
+                
+            };
+
+            bookings.ForEach(c => context.Bookings.AddOrUpdate(o => o.DateCreated, c));
+            context.SaveChanges();
+
+            var bookingsLines = new List<BookingsLine>
+            {
+               
+
+            };
+
+            bookingsLines.ForEach(c => context.BookingsLines.AddOrUpdate(im => im.BookingsID, c));
+            context.SaveChanges();
+
+
             context.SaveChanges();
 
 

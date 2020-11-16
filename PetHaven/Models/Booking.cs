@@ -1,203 +1,192 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Web;
+using PetHaven.DAL;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace PetHaven.Models
 {
     public class Booking
     {
-        [Key]
-        public int ID { get; set; }
-        public int AnimalID { get; set; }
-        //public string Category { get; set; }
-        //public string Name { get; set; }
-        //public string Description { get; set; }
-        //public string Username { get; set; }
-        //public DateTime VisitDate { get; set; }
+        private string BookingID { get; set; }
+        private string AnimalName { get; set; }
+        private string AnimalDescription { get; set; }
 
-        //private string GetBasketID()
-        //{
-        //    if (HttpContext.Current.Session[BasketSessionKey] == null)
-        //    {
-        //        if (!string.IsNullOrWhiteSpace(HttpContext.Current.User.Identity.Name))
-        //        {
-        //            HttpContext.Current.Session[BasketSessionKey] =
-        //         HttpContext.Current.User.Identity.Name;
-        //        }
-        //        else
-        //        {
-        //            Guid tempBasketID = Guid.NewGuid();
-        //            HttpContext.Current.Session[BasketSessionKey] = tempBasketID.ToString();
-        //        }
-        //    }
-        //    return HttpContext.Current.Session[BasketSessionKey].ToString();
-        //}
+        private const string BookingSessionKey = "BookingID";
+        private StoreContext db = new StoreContext();
 
-        //public static Basket GetBasket()
-        //{
-        //    Basket basket = new Basket();
-        //    basket.BasketID = basket.GetBasketID();
-        //    return basket;
-        //}
+        private string GetBookingID()
+        {
+            if (HttpContext.Current.Session[BookingSessionKey] == null)
+            {
+                if (!string.IsNullOrWhiteSpace(HttpContext.Current.User.Identity.Name))
+                {
+                    HttpContext.Current.Session[BookingSessionKey] =
+                 HttpContext.Current.User.Identity.Name;
+                }
+                else
+                {
+                    Guid tempBookingID = Guid.NewGuid();
+                    HttpContext.Current.Session[BookingSessionKey] = tempBookingID.ToString();
+                }
+            }
+            return HttpContext.Current.Session[BookingSessionKey].ToString();
+        }
 
-        //public void AddToBasket(int productID, int quantity)
-        //{
-        //    var basketLine = db.BasketLines.FirstOrDefault(b => b.BasketID == BasketID && b.ProductID
-        //     == productID);
+        public static Booking GetBooking()
+        {
+            Booking booking = new Booking();
+            booking.BookingID = booking.GetBookingID();
+            return booking;
+        }
 
-        //    if (basketLine == null)
-        //    {
-        //        basketLine = new BasketLine
-        //        {
-        //            ProductID = productID,
-        //            BasketID = BasketID,
-        //            Quantity = quantity,
-        //            DateCreated = DateTime.Now
-        //        };
-        //        db.BasketLines.Add(basketLine);
-        //    }
-        //    else
-        //    {
-        //        basketLine.Quantity += quantity;
-        //    }
-        //    db.SaveChanges();
-        //}
+        public void AddToBooking(int animalID, int quantity)
+        {
+            //var bookingLine = db.BookingLines.FirstOrDefault(b => b.BookingID == BookingID && b.AnimalID
+            // == animalID);
 
-        //public void RemoveLine(int productID)
-        //{
-        //    var basketLine = db.BasketLines.FirstOrDefault(b => b.BasketID == BasketID && b.ProductID
-        //     == productID);
-        //    if (basketLine != null)
-        //    {
-        //        db.BasketLines.Remove(basketLine);
-        //    }
-        //    db.SaveChanges();
-        //}
+            var bookingLine = db.BookingLines.FirstOrDefault(b => b.BookingID == BookingID && b.AnimalID
+             == animalID && b.AnimalName == AnimalName && b.AnimalDescrtiption == AnimalDescription);
 
-        //public void UpdateBasket(List<BasketLine> lines)
-        //{
-        //    foreach (var line in lines)
-        //    {
-        //        var basketLine = db.BasketLines.FirstOrDefault(b => b.BasketID == BasketID &&
-        //         b.ProductID == line.ProductID);
-        //        if (basketLine != null)
-        //        {
-        //            if (line.Quantity == 0)
-        //            {
-        //                RemoveLine(line.ProductID);
-        //            }
-        //            else
-        //            {
-        //                basketLine.Quantity = line.Quantity;
-        //            }
-        //        }
-        //    }
-        //    db.SaveChanges();
-        //}
+            if (bookingLine == null)
+            {
+                bookingLine = new BookingLine
+                {
+                    AnimalID = animalID,
+                    BookingID = BookingID,
+                    Quantity = quantity,
+                    AnimalName = AnimalName,
+                    AnimalDescrtiption = AnimalDescription,
+                    DateCreated = DateTime.Now
+                };
+                db.BookingLines.Add(bookingLine);
+            }
+            else
+            {
+                bookingLine.Quantity += quantity;
+            }
+            db.SaveChanges();
+        }
 
-        //public void EmptyBasket()
-        //{
-        //    var basketLines = db.BasketLines.Where(b => b.BasketID == BasketID);
-        //    foreach (var basketLine in basketLines)
-        //    {
-        //        db.BasketLines.Remove(basketLine);
-        //    }
-        //    db.SaveChanges();
-        //}
+        public void RemoveLine(int animalID)
+        {
+            var bookingLine = db.BookingLines.FirstOrDefault(b => b.BookingID == BookingID && b.AnimalID
+             == animalID);
+            if (bookingLine != null)
+            {
+                db.BookingLines.Remove(bookingLine);
+            }
+            db.SaveChanges();
+        }
 
-        //public List<BasketLine> GetBasketLines()
-        //{
-        //    return db.BasketLines.Where(b => b.BasketID == BasketID).ToList();
-        //}
+        public void UpdateBooking(List<BookingLine> lines)
+        {
+            foreach (var line in lines)
+            {
+                var bookingLine = db.BookingLines.FirstOrDefault(b => b.BookingID == BookingID &&
+                 b.AnimalID == line.AnimalID);
+                if (bookingLine != null)
+                {
+                    if (line.Quantity == 0)
+                    {
+                        RemoveLine(line.AnimalID);
+                    }
+                    else
+                    {
+                        bookingLine.Quantity = line.Quantity;
+                    }
+                }
+            }
+            db.SaveChanges();
+        }
 
-        //public decimal GetTotalCost()
-        //{
-        //    decimal basketTotal = decimal.Zero;
+        public void EmptyBooking()
+        {
+            var bookingLines = db.BookingLines.Where(b => b.BookingID == BookingID);
+            foreach (var bookingLine in bookingLines)
+            {
+                db.BookingLines.Remove(bookingLine);
+            }
+            db.SaveChanges();
+        }
 
-        //    if (GetBasketLines().Count > 0)
-        //    {
-        //        basketTotal = db.BasketLines.Where(b => b.BasketID == BasketID).Sum(b => b.Product.Price
-        //         * b.Quantity);
-        //    }
+        public List<BookingLine> GetBookingLines()
+        {
+            return db.BookingLines.Where(b => b.BookingID == BookingID).ToList();
+        }
 
-        //    return basketTotal;
-        //}
+        public int GetNumberOfItems()
+        {
+            int numberOfItems = 0;
+            if (GetBookingLines().Count > 0)
+            {
+                numberOfItems = db.BookingLines.Where(b => b.BookingID == BookingID).Sum(b => b.Quantity);
+            }
 
-        //public int GetNumberOfItems()
-        //{
-        //    int numberOfItems = 0;
-        //    if (GetBasketLines().Count > 0)
-        //    {
-        //        numberOfItems = db.BasketLines.Where(b => b.BasketID == BasketID).Sum(b => b.Quantity);
-        //    }
+            return numberOfItems;
+        }
 
-        //    return numberOfItems;
-        //}
+        public string CreateBookingsLines(int bookingsID)
+        {
+            string bookingstotal = "";
 
-        //public void MigrateBasket(string userName)
-        //{
-        //    //find the current basket and store it in memory using ToList()
-        //    var basket = db.BasketLines.Where(b => b.BasketID == BasketID).ToList();
+            var bookinglines = GetBookingLines();
 
-        //    //find if the user already has a basket or not and store it in memory using ToList()
-        //    var usersBasket = db.BasketLines.Where(b => b.BasketID == userName).ToList();
+            foreach (var item in bookinglines)
+            {
+                BookingsLine bookingsline = new BookingsLine
+                {
+                    Animal = item.Animal,
+                    AnimalID = item.AnimalID,
+                    AnimalName = item.Animal.Name,
+                    Quantity = item.Quantity,
 
-        //    //if the user has a basket then add the current items to it
-        //    if (usersBasket != null)
-        //    {
-        //        //set the basketID to the username
-        //        string prevID = BasketID;
-        //        BasketID = userName;
-        //        //add the lines in anonymous basket to the user's basket
-        //        foreach (var line in basket)
-        //        {
-        //            AddToBasket(line.ProductID, line.Quantity);
-        //        }
-        //        //delete the lines in the anonymous basket from the database
-        //        BasketID = prevID;
-        //        EmptyBasket();
-        //    }
-        //    else
-        //    {
-        //        //if the user does not have a basket then just migrate this one
-        //        foreach (var basketLine in basket)
-        //        {
-        //            basketLine.BasketID = userName;
-        //        }
+                    BookingsID = bookingsID
+                };
 
-        //        db.SaveChanges();
-        //    }
-        //    HttpContext.Current.Session[BasketSessionKey] = userName;
-        //}
+                db.BookingsLines.Add(bookingsline);
+            }
 
-        //public decimal CreateOrderLines(int orderID)
-        //{
-        //    decimal orderTotal = 0;
+            db.SaveChanges();
+            EmptyBooking();
+            return bookingstotal;
+        }
 
-        //    var basketLines = GetBasketLines();
+        public void MigrateBooking(string userName)
+        {
+            //find the current booking and store it in memory using ToList()
+            var booking = db.BookingLines.Where(b => b.BookingID == BookingID).ToList();
 
-        //    foreach (var item in basketLines)
-        //    {
-        //        OrderLine orderLine = new OrderLine
-        //        {
-        //            Product = item.Product,
-        //            ProductID = item.ProductID,
-        //            ProductName = item.Product.Name,
-        //            Quantity = item.Quantity,
-        //            UnitPrice = item.Product.Price,
-        //            OrderID = orderID
-        //        };
+            //find if the user already has a booking or not and store it in memory using ToList()
+            var usersBooking = db.BookingLines.Where(b => b.BookingID == userName).ToList();
 
-        //        orderTotal += (item.Quantity * item.Product.Price);
-        //        db.OrderLines.Add(orderLine);
-        //    }
+            //if the user has a booking then add the current items to it
+            if (usersBooking != null)
+            {
+                //set the bookingID to the username
+                string prevID = BookingID;
+                BookingID = userName;
+                //add the lines in anonymous booking to the user's booking
+                foreach (var line in booking)
+                {
+                    AddToBooking(line.AnimalID, line.Quantity);
+                }
+                //delete the lines in the anonymous booking from the database
+                BookingID = prevID;
+                EmptyBooking();
+            }
+            else
+            {
+                //if the user does not have a booking then just migrate this one
+                foreach (var bookingLine in booking)
+                {
+                    bookingLine.BookingID = userName;
+                }
 
-        //    db.SaveChanges();
-        //    EmptyBasket();
-        //    return orderTotal;
-        //}
+                db.SaveChanges();
+            }
+            HttpContext.Current.Session[BookingSessionKey] = userName;
+        }
+
     }
-
 }

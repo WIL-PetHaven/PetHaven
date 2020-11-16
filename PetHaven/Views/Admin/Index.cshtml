@@ -3,24 +3,17 @@
 }
 
 <h2>@ViewBag.Title</h2>
-<hr />
-
-<div class="admin">
-    <div class="homeCenter">
-        <div class="adminRow">
-            @Html.ActionLink("Manage Images", "Index", "AnimalImages", new { area = "" }, new { @class = "btn btn-secondary" })
-        </div>
-        <div class="adminRow">
-            @Html.ActionLink("Manage Roles", "Index", "RolesAdmin", new { area = "" }, new { @class = "btn btn-secondary" })
-        </div>
-        <div class="adminRow">
-            @Html.ActionLink("Manage Users", "Index", "UsersAdmin", new { area = "" }, new { @class = "btn btn-secondary" })
-        </div>
-        <div class="adminRow">
-            @Html.ActionLink("View all Bookings", "Index", "Orders", new { area = "" }, new { @class = "btn btn-secondary" })
-        </div>
-        <div class="adminRow">
-            @Html.ActionLink("Manage Categories", "Index", "Categories", new { area = "" }, new { @class = "btn btn-secondary" })
-        </div>
+<div class="container">
+    <div class="row">
+        @Html.ActionLink("Manage Images", "Index", "AnimalImages")
+    </div>
+    <div class="row">
+        @Html.ActionLink("Manage Roles", "Index", "RolesAdmin")
+    </div>
+    <div class="row">
+        @Html.ActionLink("Manage Users", "Index", "UsersAdmin")
+    </div>
+    <div class="row">
+        @Html.ActionLink("View all Bookings", "Index", "Bookings")
     </div>
 </div>
