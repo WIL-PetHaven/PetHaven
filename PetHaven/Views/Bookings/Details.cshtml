@@ -1,4 +1,4 @@
-﻿@model PetHaven.Models.Booking
+﻿@model PetHaven.Models.Bookings
 
 @{
     ViewBag.Title = "Details";
@@ -7,60 +7,52 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Booking</h4>
+    <h4>Bookings</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.AnimalID)
+            @Html.DisplayNameFor(model => model.UserID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AnimalID)
+            @Html.DisplayFor(model => model.UserID)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.DeliveryName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Category)
+            @Html.DisplayFor(model => model.DeliveryName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.DeliveryAddress)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.DeliveryAddress)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.AnimalName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.AnimalName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Username)
+            @Html.DisplayNameFor(model => model.DateCreated)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.VisitDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.VisitDate)
+            @Html.DisplayFor(model => model.DateCreated)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookingsID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
