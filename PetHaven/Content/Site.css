@@ -30,27 +30,27 @@ textarea {
     margin-right: 60px;
     margin-left: 60px;
 }
- 
+
 .pagination li {
     padding: 10px 15px;
     margin-left: 20px;
 }
 
-    .pagination li.active {
-        background: #1f9bcf;
-        color: white;
-    }
+.pagination li.active {
+    background: #1f9bcf;
+    color: white;
+}
 
-    .pagination li:hover {
-        background: #1f9bcf;
-        color: white;
-    }
+.pagination li:hover {
+    background: #1f9bcf;
+    color: white;
+}
 
 .pagination li:hover a {
     color: white;
 }
 
-.pagination >* {
+.pagination > * {
     vertical-align: middle;
     display: inline;
 }
@@ -67,8 +67,6 @@ textarea {
 
 .homeBackground {
     background: url('pethavenlogo.png') center fixed;
-    /*overflow: hidden !important;*/
-    /*background-size: cover;*/
     background-position-x: 70%;
     background-position-y: 50%;
     background-repeat: no-repeat;
@@ -80,10 +78,10 @@ textarea {
     background-color: var(--white);
 }
 
-    .Contact .content {
-        margin-top: 15vh;
-        padding-top: 0;
-    }
+.Contact .content {
+    margin-top: 15vh;
+    padding-top: 0;
+}
 
 .contact-grid {
     display: grid;
@@ -105,46 +103,44 @@ textarea {
     max-width: 700px;
 }
 
-    .contact_form .row {
-        display: grid;
-        grid-template-columns: .5fr 1fr;
-        grid-row-gap: 10px;
-        padding-bottom: 30px;
-    }
+.contact_form .row {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    grid-row-gap: 10px;
+    padding-bottom: 30px;
+}
 
-    .contact_form .col2 * {
-        width: 100%;
-        background-color: #F6F9FC;
-        border: none;
-        padding: 5px 20px;
-        box-sizing: border-box;
-        font-size: 20px;
-    }
+.contact_form .col2 * {
+    width: 100%;
+    background-color: #F6F9FC;
+    border: none;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+}
 
-        .contact_form .col2 *:focus {
-            background-color: #fff;
-        }
+.contact_form .col2 *:focus {
+    background-color: #fff;
+}
 
-    .contact_form .col2 input[type=submit] {
-        color: white;
-        background-color: #1f9bcf;
-        cursor: pointer;
-        box-shadow: 0 0px 10px 0 rgba(0,0,0,0.2);
-        /* transition: transform 250ms ease-in; */
-        transition: box-shadow 250ms;
-        padding: 5px 0px;
-        font-size: 26px;
-    }
+.contact_form .col2 input[type=submit] {
+    color: white;
+    background-color: #1f9bcf;
+    cursor: pointer;
+    box-shadow: 0 0px 10px 0 rgba(0,0,0,0.2);
+    transition: box-shadow 250ms;
+    padding: 5px 0px;
+    font-size: 26px;
+}
 
 
-        .contact_form .col2 input[type=submit]:hover {
-            /* transform: scale(1.02); */
-            box-shadow: 0 0px 20px 0 rgba(0,0,0,0.2);
-        }
+.contact_form .col2 input[type=submit]:hover {
+    box-shadow: 0 0px 20px 0 rgba(0,0,0,0.2);
+}
 
-    .contact_form textarea {
-        resize: none;
-    }
+.contact_form textarea {
+    resize: none;
+}
 
 .btn-primary {
     background-color: #1f9bcf !important;
@@ -157,4 +153,26 @@ textarea {
 
 .btn-third {
     background-color: white;
+}
+
+.admin {
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    text-align: center;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.admin {
+    background-color: rgba(191, 191, 191, 0.4);
+    padding: 60px;
+}
+.adminRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 15px;
 }

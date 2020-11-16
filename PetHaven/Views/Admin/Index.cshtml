@@ -5,21 +5,21 @@
 <h2>@ViewBag.Title</h2>
 <hr />
 
-<div class="home">
+<div class="admin">
     <div class="homeCenter">
-        <div class="row">
+        <div class="adminRow">
             @Html.ActionLink("Manage Images", "Index", "AnimalImages", new { area = "" }, new { @class = "btn btn-secondary" })
         </div>
-        <div class="row">
+        <div class="adminRow">
             @Html.ActionLink("Manage Roles", "Index", "RolesAdmin", new { area = "" }, new { @class = "btn btn-secondary" })
         </div>
-        <div class="row">
+        <div class="adminRow">
             @Html.ActionLink("Manage Users", "Index", "UsersAdmin", new { area = "" }, new { @class = "btn btn-secondary" })
         </div>
-        <div class="row">
+        <div class="adminRow">
             @Html.ActionLink("View all Bookings", "Index", "Orders", new { area = "" }, new { @class = "btn btn-secondary" })
         </div>
-        <div class="row">
+        <div class="adminRow">
             @Html.ActionLink("Manage Categories", "Index", "Categories", new { area = "" }, new { @class = "btn btn-secondary" })
         </div>
     </div>
