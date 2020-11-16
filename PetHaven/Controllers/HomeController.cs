@@ -40,7 +40,7 @@ namespace PetHaven.Controllers
                 await Execute(model);
 
                 // Return confirmation page
-                return RedirectToAction("MessageSubmitted");
+                return View();
             }
 
             return View();
