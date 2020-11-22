@@ -305,11 +305,11 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.pdb
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\SendGrid.xml
-C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookingLine.resources
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings1.resources
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete

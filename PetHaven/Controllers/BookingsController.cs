@@ -42,7 +42,6 @@ namespace PetHaven.Controllers
             bookings.UserID = User.Identity.Name;
             ApplicationUser user = await UserManager.FindByNameAsync(bookings.UserID);
             bookings.DeliveryName = user.FirstName + " " + user.LastName;
-            bookings.DeliveryAddress = user.Address;
             bookings.BookingsLines = new List<BookingsLine>();
             foreach (var bookingLine in booking.GetBookingLines())
             {
@@ -74,11 +73,6 @@ namespace PetHaven.Controllers
                 bookings = bookings.Where(o => o.BookingsID.ToString().Equals(bookingsSearch) ||
                  o.UserID.Contains(bookingsSearch) ||
                  o.DeliveryName.Contains(bookingsSearch) ||
-                 o.DeliveryAddress.AddressLine1.Contains(bookingsSearch) ||
-                 o.DeliveryAddress.AddressLine2.Contains(bookingsSearch) ||
-                 o.DeliveryAddress.Town.Contains(bookingsSearch) ||
-                 o.DeliveryAddress.County.Contains(bookingsSearch) ||
-                 o.DeliveryAddress.Postcode.Contains(bookingsSearch) ||
                  o.BookingsLines.Any(ol => ol.AnimalName.Contains(bookingsSearch)));
             }
 
@@ -150,11 +144,12 @@ namespace PetHaven.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,DeliveryName,DeliveryAddress")] Bookings bookings)
+        public ActionResult Create([Bind(Include = "UserID,DeliveryName,DeliveryAddress")] Bookings bookings, DateTime dateofbooking)
         {
             if (ModelState.IsValid)
             {
                 bookings.DateCreated = DateTime.Now;
+                bookings.DateOfBooking = dateofbooking;
                 db.Bookings.Add(bookings);
                 db.SaveChanges();
 
