@@ -315,3 +315,4 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreComp
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
