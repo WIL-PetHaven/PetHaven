@@ -246,6 +246,7 @@
     <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\AnimalIndexViewModel.cs" />
     <Compile Include="ViewModels\AnimalViewModel.cs" />
+    <Compile Include="ViewModels\BookingSummaryViewModel.cs" />
     <Compile Include="ViewModels\BookingViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -468,6 +469,7 @@
     <Content Include="Views\Bookings\Details.cshtml" />
     <Content Include="Views\Bookings\Edit.cshtml" />
     <Content Include="Views\Bookings\Index.cshtml" />
+    <Content Include="Views\Booking\Summary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

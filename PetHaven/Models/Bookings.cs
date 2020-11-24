@@ -15,7 +15,7 @@ namespace PetHaven.Models
         [Display(Name = "Booking By")]
         public string DeliveryName { get; set; }
 
-        [Display(Name = "Animal Jake")]
+        [Display(Name = "Animal Name")]
         public string AnimalName { get; set; }
 
         [Display(Name = "Booking Date")]
