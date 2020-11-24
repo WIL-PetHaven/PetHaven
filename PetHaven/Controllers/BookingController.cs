@@ -20,10 +20,10 @@ namespace PetHaven.Controllers
         //
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult AddToBooking(int id, int quantity)
+        public ActionResult AddToBooking(int id)
         {
             Booking booking = Booking.GetBooking();
-            booking.AddToBooking(id, quantity);
+            booking.AddToBooking(id);
             return RedirectToAction("Index");
         }
 

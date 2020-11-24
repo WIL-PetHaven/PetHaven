@@ -40,8 +40,9 @@ namespace PetHaven.Models
             return booking;
         }
 
-        public void AddToBooking(int animalID, int quantity)
+        public void AddToBooking(int animalID)
         {
+            int quantity = 1;
             //var bookingLine = db.BookingLines.FirstOrDefault(b => b.BookingID == BookingID && b.AnimalID
             // == animalID);
 
@@ -169,7 +170,7 @@ namespace PetHaven.Models
                 //add the lines in anonymous booking to the user's booking
                 foreach (var line in booking)
                 {
-                    AddToBooking(line.AnimalID, line.Quantity);
+                    AddToBooking(line.AnimalID);
                 }
                 //delete the lines in the anonymous booking from the database
                 BookingID = prevID;
