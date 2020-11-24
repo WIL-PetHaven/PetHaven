@@ -62,6 +62,9 @@ namespace PetHaven.Models
                 };
                 db.BookingLines.Add(bookingLine);
             }
+            else if(bookingLine.AnimalID == animalID){
+                db.SaveChanges();
+            }
             else
             {
                 bookingLine.Quantity += quantity;
