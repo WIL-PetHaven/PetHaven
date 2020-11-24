@@ -80,6 +80,14 @@
 
                             <div class="row">
                                 <div class="col1"></div>
+                                <div class="col1">
+                                    @Html.GoogleCaptcha()
+                                    @Html.InvalidGoogleCaptchaLabel("reCAPTCHA is not valid !")
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col1"></div>
                                 <div class="col2">
                                     <input type="submit" value="Send Message" />
                                 </div>

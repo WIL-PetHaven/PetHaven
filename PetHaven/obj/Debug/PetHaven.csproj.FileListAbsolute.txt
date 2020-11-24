@@ -224,8 +224,6 @@ F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
-F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.pdb
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.xml
 F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\csc.exe
@@ -315,3 +313,6 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreComp
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookingLine.resources
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings.resources
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings1.resources

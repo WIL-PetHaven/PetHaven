@@ -13,8 +13,6 @@ namespace PetHaven.Controllers
 {
     public class HomeController : Controller
     {
-        private const string Value = "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";
-
         public ActionResult Index()
         {
             return View();
@@ -32,6 +30,8 @@ namespace PetHaven.Controllers
 
         // Method used to post the Contact page
         [HttpPost]
+        [ValidateAntiForgeryToken]
+        [ValidateGoogleCaptcha]
         public async Task<ActionResult> Contact(ContactForm model)
         {
             // If the model state is valid (all fields have passed validation), then send a message
@@ -48,7 +48,6 @@ namespace PetHaven.Controllers
 
         static async Task Execute(ContactForm model)
         {
-
             var apiKey = "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";
             var client = new SendGridClient(apiKey);
             var from = new EmailAddress("ngo.pethaven@gmail.com", "PetHaven");

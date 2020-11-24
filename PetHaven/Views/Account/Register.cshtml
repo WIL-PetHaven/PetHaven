@@ -15,7 +15,10 @@
         @Html.Partial("_CreateRegisterUserPartial", Model)
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                @Html.GoogleCaptcha()
+                @Html.InvalidGoogleCaptchaLabel("reCAPTCHA is not valid !")
+                <br/>
+                <input type="submit" value="Register" class="btn btn-primary" />
             </div>
         </div>
     </div>
