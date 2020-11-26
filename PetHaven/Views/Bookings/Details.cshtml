@@ -26,17 +26,13 @@
             @Html.DisplayFor(model => model.DeliveryName)
         </dd>
 
-        @foreach (var item in Model.BookingsLines)
-        {
-            <dt>
-                @Html.DisplayNameFor(modelItem => item.AnimalName)
-            </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalName)
+        </dt>
 
-            <dd>
-                @Html.DisplayFor(modelItem => item.AnimalName)
-            </dd>
-
-        }
+        <dd>
+            @Html.DisplayFor(model => model.AnimalName)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.DateCreated)

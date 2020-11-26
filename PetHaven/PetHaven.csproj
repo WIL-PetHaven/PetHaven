@@ -221,6 +221,14 @@
     <Compile Include="Migrations\202011221148539_AddBookings1.Designer.cs">
       <DependentUpon>202011221148539_AddBookings1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011261050272_AddBookings2.cs" />
+    <Compile Include="Migrations\202011261050272_AddBookings2.Designer.cs">
+      <DependentUpon>202011261050272_AddBookings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011261211141_AddBookings3.cs" />
+    <Compile Include="Migrations\202011261211141_AddBookings3.Designer.cs">
+      <DependentUpon>202011261211141_AddBookings3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\StoreConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -470,6 +478,7 @@
     <Content Include="Views\Bookings\Edit.cshtml" />
     <Content Include="Views\Bookings\Index.cshtml" />
     <Content Include="Views\Booking\Summary.cshtml" />
+    <Content Include="Views\RolesAdmin\Report.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -497,6 +506,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011221148539_AddBookings1.resx">
       <DependentUpon>202011221148539_AddBookings1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011261050272_AddBookings2.resx">
+      <DependentUpon>202011261050272_AddBookings2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011261211141_AddBookings3.resx">
+      <DependentUpon>202011261211141_AddBookings3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\AutoStore.Migrations.InitialCreate.resources" />
     <EmbeddedResource Include="obj\Debug\AutoStore.Migrations.StoreConfiguration.AddBasketLine.resources" />

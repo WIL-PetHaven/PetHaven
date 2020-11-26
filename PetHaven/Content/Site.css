@@ -31,6 +31,19 @@ textarea {
     margin-left: 60px;
 }
 
+.rowCenter {
+    margin: inherit;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
 .pagination li {
     padding: 10px 15px;
     margin-left: 20px;

@@ -316,3 +316,6 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComp
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings2.resources
+C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings3.resources
