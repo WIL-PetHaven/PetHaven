@@ -3,13 +3,15 @@
 @{
     ViewBag.Title = "User Details";
 }
+<br />
+<br />
 
 <h2>@ViewBag.Title</h2>
 
 <div>
     <hr />
     <dl class="dl-horizontal">
-       @Html.Partial("_UserDetailsPartial", Model)
+        @Html.Partial("_UserDetailsPartial", Model)
     </dl>
 </div>
 <div class="container">

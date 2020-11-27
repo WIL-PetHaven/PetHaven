@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Images";
 }
+<br />
+<br />
 
 <h2>@ViewBag.Title</h2>
 
@@ -18,21 +20,22 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FileName)
-        </td>
-        <td>
-            @if (!String.IsNullOrWhiteSpace(item.FileName))
-            {
-                <img src="@(Url.Content(Constants.AnimalImagePath) + item.FileName)">
-            }
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                @if (!String.IsNullOrWhiteSpace(item.FileName))
+                {
+                    <img src="@(Url.Content(Constants.AnimalImagePath) + item.FileName)">
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>

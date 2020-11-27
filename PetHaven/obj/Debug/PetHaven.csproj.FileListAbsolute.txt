@@ -224,8 +224,6 @@ F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.dll
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\StarkbankEcdsa.dll
-F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\Newtonsoft.Json.xml
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.pdb
 F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\bin\SendGrid.xml
 F:\Varsity\Year 3\Semester 2\WIL\Test\PetHaven\PetHaven\bin\roslyn\csc.exe
@@ -315,3 +313,36 @@ C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CoreComp
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.dll
 C:\Users\Dylan\Source\Repos\PetHaven\PetHaven\obj\Debug\PetHaven.pdb
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookingLine.resources
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings.resources
+F:\Varsity\Year 3\Semester 2\WIL\PetHaven\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings1.resources
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\csc.exe
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\vbc.exe
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\VBCSCompiler.exe
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\PetHaven.dll.config
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\PetHaven.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\PetHaven.pdb
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\SendGrid.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\StarkbankEcdsa.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\SendGrid.pdb
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\bin\SendGrid.xml
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.csprojAssemblyReference.cache
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.Migrations.InitialCreate.resources
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.Migrations.update_user_fields.resources
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookingLine.resources
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings.resources
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.Migrations.StoreConfiguration.AddBookings1.resources
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.csproj.GenerateResource.cache
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.csproj.CoreCompileInputs.cache
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.csproj.CopyComplete
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.dll
+C:\Users\calvi\Documents\PetHaven (With second home page - just needs size)\PetHaven\obj\Debug\PetHaven.pdb

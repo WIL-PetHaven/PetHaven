@@ -10,8 +10,10 @@ namespace PetHaven.Models
         [Display(Name = "Address Line 2")]
         public string AddressLine2 { get; set; }
         [Required]
+        [Display(Name = "City")]
         public string Town { get; set; }
         [Required]
+        [Display(Name = "Country")]
         public string County { get; set; }
         [Required]
         public string Postcode { get; set; }

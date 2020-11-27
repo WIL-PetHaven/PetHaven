@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Animal Details";
 }
+<br />
+<br />
 
 <h2>@ViewBag.Title</h2>
 
@@ -48,11 +50,11 @@
                     </a>
                 }
             </dd>
-         }
+        }
 
         <dd>
             @if (Request.IsAuthenticated)
-             {
+            {
 
                 using (Html.BeginForm("AddToBooking", "Booking"))
                 {
@@ -60,17 +62,17 @@
                     @Html.HiddenFor(model => model.ID)
                     <input type="submit" class="btn btn-primary btn-xs" value="Book a visit">
                 }
-             }
+            }
 
         </dd>
 
     </dl>
 </div>
-    <p>
-        @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-        {
-            @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
-            @Html.Raw(" | ")
-        }
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+<p>
+    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+        @Html.Raw(" | ")
+    }
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -3,6 +3,9 @@
 @{
     ViewBag.Title = "Contact Us";
 }
+<br />
+<br />
+
 <h2>@ViewBag.Title</h2>
 <hr />
 <br />
@@ -75,6 +78,14 @@
                                 </div>
                                 <div class="col2">
                                     @Html.TextAreaFor(model => model.Message, new { @cols = "30", @rows = "5", @placeholder = "Enter message here.." })
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col1"></div>
+                                <div class="col1">
+                                    @Html.GoogleCaptcha()
+                                    @Html.InvalidGoogleCaptchaLabel("reCAPTCHA is not valid !")
                                 </div>
                             </div>
 

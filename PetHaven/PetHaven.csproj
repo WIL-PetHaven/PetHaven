@@ -200,6 +200,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Google\GoogleCaptchaHelper.cs" />
+    <Compile Include="Google\InvalidGoogleCaptchaHelper.cs" />
     <Compile Include="Migrations\201604221324063_InitialCreate.cs" />
     <Compile Include="Migrations\201604221324063_InitialCreate.Designer.cs">
       <DependentUpon>201604221324063_InitialCreate.cs</DependentUpon>
@@ -242,7 +244,9 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Google\reCAPTCHA_Keys.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Google\ValidateGoogleCaptchaAttribute.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\AnimalIndexViewModel.cs" />
     <Compile Include="ViewModels\AnimalViewModel.cs" />
@@ -316,6 +320,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrapLux.css" />
+    <Content Include="Content\SliderImages\image1.jpg" />
+    <Content Include="Content\SliderImages\image2.jpg" />
+    <Content Include="Content\SliderImages\image3.jpg" />
+    <Content Include="Content\SliderImages\image4.jpg" />
+    <Content Include="Content\SliderImages\image5.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\pethavenlogo.png" />
     <Content Include="Content\AnimalImages\Thumbnails\Bed1.jpg" />
