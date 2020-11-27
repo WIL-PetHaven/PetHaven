@@ -5,6 +5,12 @@
 
 <ul class="nav navbar-nav">
     <li>
-        @Html.ActionLink("Booking for " + Model.NumberOfItems + " animals.", "Index", "Booking")       
+        @if (Model.NumberOfItems == 1)
+        {
+            @Html.ActionLink("Booking for " + Model.NumberOfItems + " animal", "Index", "Booking", new { @class = "nav-link" }) }
+        else
+        {
+            @Html.ActionLink("Booking for " + Model.NumberOfItems + " animals", "Index", "Booking", new { @class = "nav-link" })}
     </li>
 </ul>
+

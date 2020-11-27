@@ -13,12 +13,10 @@
         @using (Html.BeginForm("UpdateBooking", "Booking"))
         {
             @Html.AntiForgeryToken();
-            <input class="btn btn-sm btn-success" type="submit" value="Update Booking" />
             <hr />
             <div class="row">
                 <div class="col-md-4"><label>Animal name</label></div>
                 <div class="col-md-3"><label>Animal description</label></div>
-                <div class="col-md-3"><label>Todays date</label></div>
 
             </div>
             <hr />
@@ -40,8 +38,6 @@
                         @Html.DisplayFor(animalDescription => Model.BookingLines[i].Animal.Description)<br />
                     </div>
 
-                    @Html.DisplayFor(dateCreated => Model.BookingLines[i].DateCreated)<br />
-
                     <div class="col-md-3">
                         @Html.HiddenFor(animalID => Model.BookingLines[i].AnimalID)
                         @Html.DisplayFor(animalName => Model.BookingLines[i].AnimalName)
@@ -51,7 +47,7 @@
                     </div>
 
                     <div class="col-md-1">
-                        @Html.ActionLink("Remove", "RemoveLine", "Booking", new { id = Model.BookingLines[i].Animal.ID }, null)
+                        @Html.ActionLink("Remove", "RemoveLine", "Booking", new { id = Model.BookingLines[i].Animal.ID }, new { @class = "btn btn-secondary" })
                     </div>
                 </div>
                 <hr />
@@ -59,17 +55,18 @@
         }
         <div class="row">
             <div class="col-md-1">
-                @Html.ActionLink("Book a visit", "Review", "Bookings", null, new { @class = "btn btn-sm btn-success" })
+                @Html.ActionLink("Book a visit", "Review", "Bookings", null, new { @class = "btn btn-sm btn-secondary" })
             </div>
         </div>
     </div>
+    <br/>
 }
 else
 {
     <p>Your Booking is empty</p>
 }
 <div>
-    @Html.ActionLink("Continue Shopping", "Index", "Animals")
+    @Html.ActionLink("Add/View more animals", "Index", "Animals", null, new { @class = "btn btn-sm btn-secondary" })
 </div>
 
 @section Scripts {
