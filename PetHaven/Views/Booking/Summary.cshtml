@@ -1,0 +1,10 @@
+﻿@model PetHaven.ViewModels.BookingSummaryViewModel
+@{
+    ViewBag.Title = "Summary";
+}
+
+<ul class="nav navbar-nav">
+    <li>
+        @Html.ActionLink("Booking for " + Model.NumberOfItems + " animals.", "Index", "Booking")       
+    </li>
+</ul>

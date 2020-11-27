@@ -46,15 +46,15 @@ namespace PetHaven.Controllers
             return RedirectToAction("Index");
         }
 
-        ////
-        //public PartialViewResult Summary()
-        //{
-        //    Booking booking = Booking.GetBooking();
-        //    BookingSummaryViewModel viewModel = new BookingSummaryViewModel
-        //    {
-        //        NumberOfItems = booking.GetNumberOfItems(),
-        //    };
-        //    return PartialView(viewModel);
-        //}
+        //
+        public PartialViewResult Summary()
+        {
+            Booking booking = Booking.GetBooking();
+            BookingSummaryViewModel viewModel = new BookingSummaryViewModel
+            {
+                NumberOfItems = booking.GetNumberOfItems(),
+            };
+            return PartialView(viewModel);
+        }
     }
 }

@@ -43,9 +43,6 @@
         <th>
             @Html.DisplayNameFor(model => model.DeliveryName)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnimalName)
-        </th>
 
         <th>
             @Html.ActionLink("Time of Booking", "Index", new
@@ -72,10 +69,7 @@
                 @Html.DisplayFor(modelItem => item.DeliveryName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.AnimalName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateCreated)
+                @Html.DisplayFor(modelItem => item.DateOfBooking)
             </td>
             <td>
                 @Html.ActionLink("Details", "Details", new { id = item.BookingsID })

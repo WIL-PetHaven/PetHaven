@@ -15,14 +15,16 @@ namespace PetHaven.Models
         [Display(Name = "Booking By")]
         public string DeliveryName { get; set; }
 
-        [Display(Name = "Animal Jake")]
+        [Display(Name = "Animal Name")]
         public string AnimalName { get; set; }
 
-        [Display(Name = "Booking Date")]
+        [Display(Name = "Date Created")]
         public DateTime DateCreated { get; set; }
 
+        [Required]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Date of Booking")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd 0:HH:mmm:sss}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBooking { get; set; }
 
         public List<BookingsLine> BookingsLines { get; set; }

@@ -4,18 +4,32 @@
 <br />
 <br />
 
-<h2>@ViewBag.Title</h2>
-<div class="container">
-    <div class="row">
-        @Html.ActionLink("Manage Images", "Index", "AnimalImages")
+<body class="homeCenter">
+    <div class="container">
+        <div class="center">
+            <h1>Administrator</h1>
+            <br />
+            <br />
+            <div>
+                @Html.ActionLink("Manage Images", "Index", "AnimalImages", new { area = "" }, new { @class = "btn btn-secondary" })
+            </div>
+            <br />
+            <div>
+                @Html.ActionLink("Manage Roles", "Index", "RolesAdmin", new { area = "" }, new { @class = "btn btn-secondary" })
+            <div/>
+            <br />
+            <div>
+                @Html.ActionLink("View recent reports", "Report", "RolesAdmin", new { area = "" }, new { @class = "btn btn-secondary" })
+            </div>
+            <br />
+            <div>
+                @Html.ActionLink("Manage Users", "Index", "UsersAdmin", new { area = "" }, new { @class = "btn btn-secondary" })
+            </div>
+            <br />
+            <div>
+                @Html.ActionLink("View all Bookings", "Index", "Bookings", new { area = "" }, new { @class = "btn btn-secondary" })
+            </div>
+
+        </div>
     </div>
-    <div class="row">
-        @Html.ActionLink("Manage Roles", "Index", "RolesAdmin")
-    </div>
-    <div class="row">
-        @Html.ActionLink("Manage Users", "Index", "UsersAdmin")
-    </div>
-    <div class="row">
-        @Html.ActionLink("View all Bookings", "Index", "Bookings")
-    </div>
-</div>
+</body>

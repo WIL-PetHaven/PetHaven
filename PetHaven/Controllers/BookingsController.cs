@@ -73,6 +73,7 @@ namespace PetHaven.Controllers
                 bookings = bookings.Where(o => o.BookingsID.ToString().Equals(bookingsSearch) ||
                  o.UserID.Contains(bookingsSearch) ||
                  o.DeliveryName.Contains(bookingsSearch) ||
+                 o.AnimalName.Contains(bookingsSearch) ||
                  o.BookingsLines.Any(ol => ol.AnimalName.Contains(bookingsSearch)));
             }
 
@@ -144,8 +145,9 @@ namespace PetHaven.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,DeliveryName,DeliveryAddress")] Bookings bookings, DateTime dateofbooking)
+        public ActionResult Create([Bind(Include = "UserID, DeliveryName, AnimalName")] Bookings bookings, DateTime dateofbooking)
         {
+            BookingsLine bookingsLine = new BookingsLine();
             if (ModelState.IsValid)
             {
                 bookings.DateCreated = DateTime.Now;
@@ -156,7 +158,7 @@ namespace PetHaven.Controllers
                 //add the orderlines to the database after creating the order
                 Booking booking = Booking.GetBooking();
 
-                //bookings.TotalPrice = booking.CreateBookingsLines(bookings.BookingsID);
+                bookings.AnimalName = booking.CreateBookingsLines(bookings.BookingsID);
                 
                 db.SaveChanges();
                 return RedirectToAction("Details", new { id = bookings.BookingsID });
