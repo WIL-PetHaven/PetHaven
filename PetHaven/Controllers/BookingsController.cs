@@ -145,21 +145,20 @@ namespace PetHaven.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID,DeliveryName")] Bookings bookings, DateTime dateofbooking, string animalName)
+        public ActionResult Create([Bind(Include = "UserID, DeliveryName, AnimalName")] Bookings bookings, DateTime dateofbooking)
         {
             BookingsLine bookingsLine = new BookingsLine();
             if (ModelState.IsValid)
             {
                 bookings.DateCreated = DateTime.Now;
                 bookings.DateOfBooking = dateofbooking;
-                bookings.AnimalName = animalName;
                 db.Bookings.Add(bookings);
                 db.SaveChanges();
 
                 //add the orderlines to the database after creating the order
                 Booking booking = Booking.GetBooking();
 
-                //bookings.TotalPrice = booking.CreateBookingsLines(bookings.BookingsID);
+                bookings.AnimalName = booking.CreateBookingsLines(bookings.BookingsID);
                 
                 db.SaveChanges();
                 return RedirectToAction("Details", new { id = bookings.BookingsID });

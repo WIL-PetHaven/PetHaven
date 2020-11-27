@@ -18,12 +18,12 @@ namespace PetHaven.Models
         [Display(Name = "Animal Name")]
         public string AnimalName { get; set; }
 
-        [Display(Name = "Booking Date")]
+        [Display(Name = "Date Created")]
         public DateTime DateCreated { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
-        [Display(Name = "Date of birth")]
+        [Display(Name = "Date of Booking")]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd 0:HH:mmm:sss}", ApplyFormatInEditMode = true)]
         public DateTime DateOfBooking { get; set; }
 

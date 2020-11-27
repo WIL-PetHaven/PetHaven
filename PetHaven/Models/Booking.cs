@@ -142,7 +142,7 @@ namespace PetHaven.Models
                 {
                     Animal = item.Animal,
                     AnimalID = item.AnimalID,
-                    AnimalName = item.AnimalName,
+                    AnimalName = item.Animal.Name,
                     Quantity = item.Quantity,
 
                     BookingsID = bookingsID
