@@ -60,7 +60,7 @@
                 {
                     @Html.AntiForgeryToken()
                     @Html.HiddenFor(model => model.ID)
-                    <input type="submit" class="btn btn-primary btn-xs" value="Book a visit">
+                    <input type="submit" class="btn btn-primary btn-xs" value="Add to Booking ">
                 }
             }
 
@@ -71,8 +71,8 @@
 <p>
     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
     {
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ID })
+        @Html.ActionLink("Edit Animal Details", "Edit", new { id = Model.ID }, new { @class = "btn btn-sm btn-secondary" })
         @Html.Raw(" | ")
     }
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to Animal List", "Index", null, new { @class = "btn btn-sm btn-secondary" })
 </p>

@@ -90,6 +90,12 @@ namespace PetHaven.Controllers
             return View();
         }
 
+        // GET: RolesAdmin/Report
+        public ActionResult Report()
+        {
+            return View();
+        }
+
         // POST: RolesAdmin/Create
         [HttpPost]
         public async Task<ActionResult> Create(RoleViewModel roleViewModel)
