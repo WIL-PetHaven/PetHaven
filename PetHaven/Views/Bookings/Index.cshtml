@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<PetHaven.Models.Bookings>
 
 @{ ViewBag.Title = "Bookings"; }
+<br />
+<br />
 
 <h2>@ViewBag.Title</h2>
 @using (Html.BeginForm("Index", "Bookings", FormMethod.Get))
@@ -79,6 +81,6 @@
                 @Html.ActionLink("Details", "Details", new { id = item.BookingsID })
             </td>
         </tr>
-}
+    }
 
 </table>

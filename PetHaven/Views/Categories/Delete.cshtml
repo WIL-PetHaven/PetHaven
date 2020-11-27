@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Delete Category";
 }
+<br />
+<br />
 
 <h2>@ViewBag.Title</h2>
 
@@ -20,7 +22,8 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">

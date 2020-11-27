@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Register";
 }
+<br />
+<br />
 
 <h2>@ViewBag.Title</h2>
 
@@ -17,7 +19,7 @@
             <div class="col-md-offset-2 col-md-10">
                 @Html.GoogleCaptcha()
                 @Html.InvalidGoogleCaptchaLabel("reCAPTCHA is not valid !")
-                <br/>
+                <br />
                 <input type="submit" value="Register" class="btn btn-primary" />
             </div>
         </div>

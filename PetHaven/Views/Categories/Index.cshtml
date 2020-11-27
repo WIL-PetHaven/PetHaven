@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Categories";
 }
+<br />
+<br />
 
 <h2>@ViewBag.Title</h2>
 
@@ -20,20 +22,21 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.ActionLink(item.Name, "Index", "Animals", new { category = item.Name }, null)
-        </td>
-        <td>
-            @if (Request.IsAuthenticated && User.IsInRole("Admin"))
-            {
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                @Html.Raw(" | ")
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-            }
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Name, "Index", "Animals", new { category = item.Name }, null)
+            </td>
+            <td>
+                @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                    @Html.Raw(" | ")
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                }
+            </td>
+        </tr>
+    }
 
 </table>
