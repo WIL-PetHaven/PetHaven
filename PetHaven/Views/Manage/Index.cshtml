@@ -12,17 +12,14 @@
     <hr />
     <dl class="dl-horizontal">
         @Html.Partial("_UserDetailsPartial", Model)
-        <dt>
-            Password
-        </dt>
         <dd>
-            @Html.ActionLink("Change your password", "ChangePassword")
+            @Html.ActionLink("Change my password", "ChangePassword", null, new { @class = "btn btn-sm btn-secondary" })
         </dd>
     </dl>
 </div>
 
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+    @Html.ActionLink("Edit My Details", "Edit", new { id = Model.Id }, new { @class = "btn btn-sm btn-secondary" })
 </p>
-<h2>@Html.ActionLink("View my Bookings", "Index", "Bookings")</h2>
+<h2>@Html.ActionLink("View my Bookings", "Index", "Bookings", null, new { @class = "btn btn-sm btn-secondary" })</h2>
 
