@@ -50,9 +50,9 @@
         </div>
     </div>
 
+    <h8>Please confirm a booking date and time you would like to visit</h8>
     <div class="form-group">
-        <div class="col-md-10">
-            @Html.DisplayNameFor(model => model.DateOfBooking)
+        <div class="col-md-10">            
             @*@Html.EditorFor(model => model.DateOfBooking, new { htmlAttributes = new { @class = "form-control" } })*@
             @Html.TextBoxFor(model => model.DateOfBooking, new { type = "datetime-local", @class = "form-control" })
         </div>
@@ -60,7 +60,7 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-primary" />
+            <input type="submit" value="Confirm your booking" class="btn btn-primary" />
         </div>
     </div>
 </div>}
