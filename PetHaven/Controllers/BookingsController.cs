@@ -10,6 +10,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity.Owin;
 using PetHaven.DAL;
 using PetHaven.Models;
+using SendGrid;
+using SendGrid.Helpers.Mail;
 
 namespace PetHaven.Controllers
 {
@@ -145,7 +147,7 @@ namespace PetHaven.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UserID, DeliveryName, AnimalName")] Bookings bookings, DateTime dateofbooking)
+        public async Task<ActionResult> Create([Bind(Include = "UserID, DeliveryName, AnimalName")] Bookings bookings, DateTime dateofbooking, BookingsLine bookingsLines)
         {
             BookingsLine bookingsLine = new BookingsLine();
             if (ModelState.IsValid)
@@ -161,6 +163,9 @@ namespace PetHaven.Controllers
                 bookings.AnimalName = booking.CreateBookingsLines(bookings.BookingsID);
                 
                 db.SaveChanges();
+
+                await Execute(bookings, bookingsLine);
+
                 return RedirectToAction("Details", new { id = bookings.BookingsID });
             }
             return RedirectToAction("Review");
@@ -230,6 +235,41 @@ namespace PetHaven.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        static async Task Execute(Bookings model, BookingsLine bookingsLine)
+        {
+            var apiKey = "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";
+            var client = new SendGridClient(apiKey);
+            var from = new EmailAddress("ngo.pethaven@gmail.com", "PetHaven");
+
+            var subject1 = "Booking Confirmation";
+            var to1 = new EmailAddress(model.UserID, model.UserID);
+            var plainTextContent1 = model.UserID;
+            var htmlContent1 = "<!DOCTYPE html> <html lang=\"en\"><head><meta charset=\"UTF-8\"> <meta name=\"viewport\" contentwidth=\"device-width\", initial-scale=\"1.0\", maximum-scale=\"1.0\", user-scalable=\"no\", height=\"device-height\"/> <meta http-equiv=\"X-UA-Compatible\" content=\"ie-edge\"/> </head> <body style=\"width: 100%;margin: 0px;padding: 0px;font-family: Arial, Helvetica, sans-serif;margin-top: 5vh;\"> <div class=\"container\" style=\"max-width: 800px;margin:auto;box-shadow: 0 6px 20px rgba(0,0,0,.4);height: auto;background-color: grey;\"> <div class=\"headingRow\" style=\"background-color: #39393A;width: 100%;padding: 15px 0;color: #ffff;display: grid;grid-template-columns: repeat(3, 1fr);\"> <div class=\"company\" style=\"text-align: left;font-size: 14px;padding-left: 20px;\"> </div> <div class=\"emailType\" style=\"text-align: center;\"> <h1 style =\"font-size: 20px;margin: 0;padding: 0;\">" +
+                "Booking Confirmation" +
+                "</h1> </div> </div> <div class=\"customerInfo\" style=\"background-color: #F6F9FC;padding: 20px 20px;margin: 20px 0;\"> <p class=\"emailContent_title\" style=\"font-size: 20px;margin-bottom: 20px;\"> <b>" +
+                "Booking Information" +
+                "</b> </p> <div class=\"info-container\" style=\"width: 400px;margin: 0 auto;overflow: hidden; padding-bottom: 20px;\"> <div class=\"custRow\" style=\"margin-bottom: 10px;display: grid;grid-template-columns: .5fr 1fr;grid-column-gap: 20px;\"> <p class=\"cust-item\" style=\"text-align: left;padding: 5px 0;\">Animal Name:</p> <p class=\"cust-descr\" style=\"background-color: #ffff;padding: 5px 30px;text-align: left;\">" + model.DeliveryName +
+                "</p> </div> <div class=\"custRow\" style=\"margin-bottom: 10px;display: grid;grid-template-columns: .5fr 1fr;grid-column-gap: 20px;\"> <p class=\"cust-item\" style=\"text-align: left; padding: 5px 0;\">Animal Name:</p> <p class=\"cust-descr\" style=\"background-color: #ffff;padding: 5px 30px;text-align: left;\">" + bookingsLine.Animal.Name +
+                "</p> </div> <div class=\"custRow\" style=\"margin-bottom: 10px;display: grid;grid-template-columns: .5fr 1fr;grid-column-gap: 20px;\"> <p class=\"cust-item\" style=\"text-align: left;padding: 5px 0;\">Date and TIme of Booking:</p> <p class=\"cust-descr\" style=\"background-color: #ffff;padding: 5px 30px;text-align: left;\">" + model.DateOfBooking +
+                "</p> </div> </div> </div> </div> </div> </body> </html>";
+            var msg1 = MailHelper.CreateSingleEmail(from, to1, subject1, plainTextContent1, htmlContent1);
+            var response1 = await client.SendEmailAsync(msg1);
+
+            var subject2 = "New Booking";
+            var to2 = new EmailAddress("ngo.pethaven@gmail.com", "PetHaven");
+            var plainTextContent2 = model.UserID;
+            var htmlContent2 = "<!DOCTYPE html> <html lang=\"en\"><head><meta charset=\"UTF-8\"> <meta name=\"viewport\" contentwidth=\"device-width\", initial-scale=\"1.0\", maximum-scale=\"1.0\", user-scalable=\"no\", height=\"device-height\"/> <meta http-equiv=\"X-UA-Compatible\" content=\"ie-edge\"/> </head> <body style=\"width: 100%;margin: 0px;padding: 0px;font-family: Arial, Helvetica, sans-serif;margin-top: 5vh;\"> <div class=\"container\" style=\"max-width: 800px;margin:auto;box-shadow: 0 6px 20px rgba(0,0,0,.4);height: auto;background-color: grey;\"> <div class=\"headingRow\" style=\"background-color: #39393A;width: 100%;padding: 15px 0;color: #ffff;display: grid;grid-template-columns: repeat(3, 1fr);\"> <div class=\"company\" style=\"text-align: left;font-size: 14px;padding-left: 20px;\"> </div> <div class=\"emailType\" style=\"text-align: center;\"> <h1 style =\"font-size: 20px;margin: 0;padding: 0;\">" +
+                "Booking Confirmation" +
+                "</h1> </div> </div> <div class=\"customerInfo\" style=\"background-color: #F6F9FC;padding: 20px 20px;margin: 20px 0;\"> <p class=\"emailContent_title\" style=\"font-size: 20px;margin-bottom: 20px;\"> <b>" +
+                "Booking Information" +
+                "</b> </p> <div class=\"info-container\" style=\"width: 400px;margin: 0 auto;overflow: hidden; padding-bottom: 20px;\"> <div class=\"custRow\" style=\"margin-bottom: 10px;display: grid;grid-template-columns: .5fr 1fr;grid-column-gap: 20px;\"> <p class=\"cust-item\" style=\"text-align: left;padding: 5px 0;\">Animal Name:</p> <p class=\"cust-descr\" style=\"background-color: #ffff;padding: 5px 30px;text-align: left;\">" + model.DeliveryName +
+                "</p> </div> <div class=\"custRow\" style=\"margin-bottom: 10px;display: grid;grid-template-columns: .5fr 1fr;grid-column-gap: 20px;\"> <p class=\"cust-item\" style=\"text-align: left; padding: 5px 0;\">Animal Name:</p> <p class=\"cust-descr\" style=\"background-color: #ffff;padding: 5px 30px;text-align: left;\">" + model.AnimalName +
+                "</p> </div> <div class=\"custRow\" style=\"margin-bottom: 10px;display: grid;grid-template-columns: .5fr 1fr;grid-column-gap: 20px;\"> <p class=\"cust-item\" style=\"text-align: left;padding: 5px 0;\">Date of Booking:</p> <p class=\"cust-descr\" style=\"background-color: #ffff;padding: 5px 30px;text-align: left;\">" + model.DateOfBooking +
+                "</p> </div> </div> </div> </div> </div> </body> </html>";
+            var msg2 = MailHelper.CreateSingleEmail(from, to2, subject2, plainTextContent2, htmlContent2);
+            var response2 = await client.SendEmailAsync(msg2);
         }
     }
 }
