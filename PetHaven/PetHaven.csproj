@@ -333,6 +333,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrapLux.css" />
+    <Content Include="Content\pic.jpg" />
     <Content Include="Content\SliderImages\image1.jpg" />
     <Content Include="Content\SliderImages\image2.jpg" />
     <Content Include="Content\SliderImages\image3.jpg" />
@@ -383,6 +384,10 @@
     <Content Include="Content\AnimalImages\Thumbnails\SleepSuit2.jpg" />
     <Content Include="Content\AnimalImages\Thumbnails\Vest1.jpg" />
     <Content Include="Content\AnimalImages\Thumbnails\Vest2.jpg" />
+    <Content Include="Content\SliderImages\image6.jpg" />
+    <Content Include="Content\SliderImages\image7.jpg" />
+    <Content Include="Content\SliderImages\image8.jpg" />
+    <Content Include="Content\SliderImages\image9.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
