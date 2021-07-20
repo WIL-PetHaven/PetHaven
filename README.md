@@ -1,5 +1,4 @@
 # PetHaven
- * Still need to change
  * Description
  * Requirements
  * Installation
@@ -9,30 +8,6 @@
  * FAQ
  * Maintainers
  --------
-### Still need to change
- * Theme
- > Ensure the home page design does not distort on different devices.
-
- > Any other advice for design can be incorporated once agreed upon.
-
- * Basket 
- > Change the basket to booking as there is no check out.
-
- > When in the basket no pricing should be seen.
-
- > Change order now to book now. When clicked all details of the animal should be displayed.
-
- * Admin
- > View all orders to change to view current bookings, should display animal name instead of total price.
-
- * Misc
- > Add date for when the animal was rescued.
-
- > 
-
- * Additional changes when we come across them can be added below.
- >
-
 
  --------
 ### Description
